@@ -4,7 +4,13 @@ https://github.com/users/HyoSekiya/projects/2/views/3
 ## 麻雀英語集
 https://perceptualmahjong.blog.ss-blog.jp/2010-10-08
 
-## apicode(string)
+## apicode:string
+## 三元牌
+```
+white_dragons
+green_dragons
+red_dragons
+```
 ## 索子
 ```
 one_bamboos
