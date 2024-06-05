@@ -2,7 +2,8 @@
 ## タスク看板
 https://github.com/users/HyoSekiya/projects/2/views/3
 ## 麻雀英語集
-https://perceptualmahjong.blog.ss-blog.jp/2010-10-08
+全体的に：https://perceptualmahjong.blog.ss-blog.jp/2010-10-08
+役：https://chouseisan.com/l/post-9420/
 
 ## apicode:string
 ## 三元牌
