@@ -8,15 +8,15 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public enum Circles {
 
-    ONE_CIRCLES("1筒", "one_circles"),
-    TWO_CIRCLES("2筒", "two_circles"),
-    THREE_CIRCLES("3筒", "three_circles"),
-    FOUR_CIRCLES("4筒", "four_circles"),
-    FIVE_CIRCLES("5筒", "five_circles"),
-    SIX_CIRCLES("6筒", "six_circles"),
-    SEVEN_CIRCLES("7筒", "seven_circles"),
-    EIGHT_CIRCLES("8筒", "eight_circles"),
-    NINE_CIRCLES("9筒", "nine_circles")
+    ONE_CIRCLES("1筒", "one_circle"),
+    TWO_CIRCLES("2筒", "two_circle"),
+    THREE_CIRCLES("3筒", "three_circle"),
+    FOUR_CIRCLES("4筒", "four_circle"),
+    FIVE_CIRCLES("5筒", "five_circle"),
+    SIX_CIRCLES("6筒", "six_circle"),
+    SEVEN_CIRCLES("7筒", "seven_circle"),
+    EIGHT_CIRCLES("8筒", "eight_circle"),
+    NINE_CIRCLES("9筒", "nine_circle")
     ;
 
     public final String level;

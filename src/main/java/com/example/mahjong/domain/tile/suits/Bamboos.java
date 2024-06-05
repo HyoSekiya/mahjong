@@ -8,15 +8,15 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public enum Bamboos {
 
-    ONE_BAMBOOS("1索", "one_bamboos"),
-    TWO_BAMBOOS("2索", "two_bamboos"),
-    THREE_BAMBOOS("3索", "three_bamboos"),
-    FOUR_BAMBOOS("4索", "four_bamboos"),
-    FIVE_BAMBOOS("5索", "five_bamboos"),
-    SIX_BAMBOOS("6索", "six_bamboos"),
-    SEVEN_BAMBOOS("7索", "seven_bamboos"),
-    EIGHT_BAMBOOS("8索", "eight_bamboos"),
-    NINE_BAMBOOS("9索", "nine_bamboos"),
+    ONE_BAMBOOS("1索", "one_bamboo"),
+    TWO_BAMBOOS("2索", "two_bamboo"),
+    THREE_BAMBOOS("3索", "three_bamboo"),
+    FOUR_BAMBOOS("4索", "four_bamboo"),
+    FIVE_BAMBOOS("5索", "five_bamboo"),
+    SIX_BAMBOOS("6索", "six_bamboo"),
+    SEVEN_BAMBOOS("7索", "seven_bamboo"),
+    EIGHT_BAMBOOS("8索", "eight_bamboo"),
+    NINE_BAMBOOS("9索", "nine_bamboo"),
     ;
 
     public final String level;
