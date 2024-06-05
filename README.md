@@ -7,9 +7,9 @@ https://perceptualmahjong.blog.ss-blog.jp/2010-10-08
 ## apicode:string
 ## 三元牌
 ```
-white_dragons
-green_dragons
-red_dragons
+white_dragon
+green_dragon
+red_dragon
 ```
 ## 索子
 ```
