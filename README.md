@@ -18,7 +18,7 @@ east
 south
 west
 north
-``
+```
 ## 索子
 ```
 one_bamboos
