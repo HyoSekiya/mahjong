@@ -2,6 +2,9 @@ package com.example.mahjong.domain.tile.suits;
 
 import lombok.AllArgsConstructor;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  *　索子
  */
@@ -23,12 +26,18 @@ public enum Bamboos {
 
     public final String apiCode;
 
-    public static boolean is索子(String apiCode) {
+    private static boolean is索子(String apiCode) {
         for (Bamboos bamboos: Bamboos.values()) {
             if (bamboos.apiCode.equals(apiCode)){
                 return true;
             }
         }
         return false;
+    }
+
+    public static List<String> extraction(List<String> apiCodeList){
+        return apiCodeList.stream()
+                .filter(Bamboos::is索子)
+                .collect(Collectors.toList());
     }
 }

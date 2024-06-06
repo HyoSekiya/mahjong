@@ -2,6 +2,9 @@ package com.example.mahjong.domain.tile.suits;
 
 import lombok.AllArgsConstructor;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * 萬子
  */
@@ -22,7 +25,7 @@ public enum Characters{
     public final String level;
     public final String apiCode;
 
-    public static boolean is萬子(String apiCode) {
+    private static boolean is萬子(String apiCode) {
         for (Characters characters: Characters.values()){
             if(apiCode.equals(characters.apiCode)){
                 return true;
@@ -30,5 +33,11 @@ public enum Characters{
         }
 
         return false;
+    }
+
+    public static List<String> extraction(List<String> apicodeList){
+        return apicodeList.stream()
+                .filter(Characters::is萬子)
+                .collect(Collectors.toList());
     }
 }

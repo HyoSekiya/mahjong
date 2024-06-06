@@ -1,8 +1,10 @@
 package com.example.mahjong.domain.role;
 
+import com.example.mahjong.domain.tile.valuetiles.Dragons;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @AllArgsConstructor

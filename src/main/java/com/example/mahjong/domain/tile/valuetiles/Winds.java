@@ -2,6 +2,9 @@ package com.example.mahjong.domain.tile.valuetiles;
 
 import lombok.AllArgsConstructor;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Winds(風牌)
  */
@@ -17,12 +20,18 @@ public enum Winds {
 
     private final String apiCode;
 
-    public static boolean is風牌(String apiCode){
+    private static boolean is風牌(String apiCode){
         for(Winds winds: Winds.values()){
             if (apiCode.equals(winds.apiCode)){
                 return true;
             }
         }
         return false;
+    }
+
+    public static List<String> extraction(List<String> apiCodeList){
+        return apiCodeList.stream()
+                .filter(Winds::is風牌)
+                .collect(Collectors.toList());
     }
 }

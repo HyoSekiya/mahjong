@@ -1,7 +1,7 @@
 package com.example.mahjong.api.request;
 
-import com.example.mahjong.service.ArrangeService;
-import com.example.mahjong.service.RoleService;
+import com.example.mahjong.domain.Arrange;
+import com.example.mahjong.domain.RoleList;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,14 +15,14 @@ import java.util.Map;
 public class MahjongApi {
 
     @Autowired
-    private final ArrangeService arrangeService;
+    private final Arrange arrangeService;
 
     // TODO:計算用のServiceクラス（仮）
 //    @Autowired
 //    private final CaluculateService caluculateService;
 
     @Autowired
-    private  final RoleService roleService;
+    private  final RoleList roleService;
 
     @PostMapping("/arrange")
     public List<Map<String,String>> invoke(@RequestBody MahjongRequest request){

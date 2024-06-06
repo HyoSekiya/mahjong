@@ -1,4 +1,4 @@
-package com.example.mahjong.service;
+package com.example.mahjong.domain;
 
 import com.example.mahjong.domain.role.Dragons.DragonsRole;
 import com.example.mahjong.domain.role.Role;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Service
 @AllArgsConstructor
-public class RoleService {
+public class RoleList {
 
     private final DragonsRole dragonsRole;
     public List<Map<String,String>> roleList(List<String> arrangeList) {

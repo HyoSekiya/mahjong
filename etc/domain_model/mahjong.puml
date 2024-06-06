@@ -1,0 +1,96 @@
+@startuml
+package domain {
+    class 役の判定 {
+        上がった役を返す(List<String>) : List<String>
+    }
+    class 並べる {
+        牌の種類ごとに並べる(List<String>) : List<String>
+    }
+
+    package 役 {
+        enum 役一覧 {
+            白
+            發
+            中
+            + 役名,飜数(役) : Map<String,String>
+        }
+
+        class 役牌 {
+            is白(List<String>) : boolean
+            is發(List<String>) : boolean
+            is中(List<String>) : boolean
+        }
+    }
+
+    package 牌 {
+        package 数牌 {
+            enum 索子 {
+                1索子
+                2索子
+                3索子
+                4索子
+                5索子
+                6索子
+                7索子
+                8索子
+                9索子
+                {static} + 索子の抽出(List<String>) : List<String>
+                {static} - 索子か(String) : boolean
+            }
+            enum 萬子 {
+                1萬子
+                2萬子
+                3萬子
+                4萬子
+                5萬子
+                6萬子
+                7萬子
+                8萬子
+                9萬子
+                {static} + 萬子の抽出(List<String>) : List<String>
+                {static} - 萬子か(String) : boolean
+            }
+            enum 筒子 {
+                1筒子
+                2筒子
+                3筒子
+                4筒子
+                5筒子
+                6筒子
+                7筒子
+                8筒子
+                9筒子
+                {static} + 筒子の抽出(List<String>) : List<String>
+                {static} - 筒子か(String) : boolean
+            }
+        }
+        package 字牌 {
+            enum 三元牌 {
+                白
+                發
+                中
+                {static} + 三元牌の抽出(List<String>) : List<String>
+                {static} + 白か(String) : boolean
+                {static} + 發か(String) : boolean
+                {static} + 中か(String) : boolean
+            }
+            enum 風牌 {
+                東
+                南
+                西
+                北
+                {static} + 風牌の抽出(List<String>) : List<String>
+                {static} - 風牌か(String) : boolean
+            }
+        }
+    }
+    役の判定 --> 役牌
+    役牌 --> 役一覧
+    並べる --> 索子
+    並べる --> 萬子
+    並べる --> 筒子
+    並べる --> 三元牌
+    並べる --> 風牌
+}
+
+@enduml

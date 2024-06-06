@@ -2,6 +2,8 @@ package com.example.mahjong.domain.tile.suits;
 
 import lombok.AllArgsConstructor;
 
+import java.util.List;
+
 /**
  * 筒子
  */
@@ -22,11 +24,17 @@ public enum Circles {
     public final String level;
     public final String apiCode;
 
-    public static boolean is筒子(String apiCode) {
+    private static boolean is筒子(String apiCode) {
         for(Circles circles: Circles.values()){
             return apiCode.equals(circles.apiCode);
         }
 
         return false;
+    }
+
+    public static List<String> extraction(List<String> apiCodeList){
+        return apiCodeList.stream()
+                .filter(Circles::is筒子)
+                .toList();
     }
 }
