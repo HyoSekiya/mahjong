@@ -12,6 +12,13 @@ white_dragon
 green_dragon
 red_dragon
 ```
+## 風牌
+```
+east
+south
+west
+north
+``
 ## 索子
 ```
 one_bamboos
