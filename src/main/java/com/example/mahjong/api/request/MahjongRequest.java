@@ -1,6 +1,7 @@
 package com.example.mahjong.api.request;
 
 
+import com.example.mahjong.domain.tile.valuetiles.Winds;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -47,6 +48,4 @@ public class MahjongRequest {
 
         return list;
     }
-
-
 }
