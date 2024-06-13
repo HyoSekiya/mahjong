@@ -2,6 +2,7 @@ package com.example.mahjong.domain.tile.valuetiles;
 
 import lombok.AllArgsConstructor;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,7 +21,7 @@ public enum Winds {
 
     private final String apiCode;
 
-    private static boolean is風牌(String apiCode){
+    public static boolean is風牌(String apiCode){
         for(Winds winds: Winds.values()){
             if (apiCode.equals(winds.apiCode)){
                 return true;
@@ -32,6 +33,25 @@ public enum Winds {
     public static List<String> extraction(List<String> apiCodeList){
         return apiCodeList.stream()
                 .filter(Winds::is風牌)
+                .sorted(Comparator.comparingInt(apiCode -> arrange(convertWinds(apiCode))))
                 .collect(Collectors.toList());
+    }
+
+    public static int arrange(Winds winds){
+        return switch(winds) {
+            case East -> 1;
+            case South -> 2;
+            case West -> 3;
+            case North -> 4;
+        };
+    }
+
+    public static Winds convertWinds(String apiCode){
+        for (Winds winds: Winds.values()){
+            if (winds.apiCode.equals(apiCode)){
+                return winds;
+            }
+        }
+        throw new RuntimeException(apiCode + "は風牌ではないので、変換できません");
     }
 }
