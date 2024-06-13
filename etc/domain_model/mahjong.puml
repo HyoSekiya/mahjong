@@ -1,29 +1,54 @@
 @startuml
+package api {
+    class Api {
+        Service
+        和了の各牌と各役を表示(利用者の牌) : void
+    }
+    class 利用者の牌 {
+        1つ目
+        2つ目
+        3つ目
+        4つ目
+        5つ目
+        6つ目
+        7つ目
+        8つ目
+        9つ目
+        10つ目
+        11つ目
+        12つ目
+        13つ目
+        14つ目
+        リクエストを作成() : List<String>
+    }
+}
+Api ..> 利用者の牌
+
+package service{
+    class Service{
+        利用者のリクエストを牌に変換するくん
+        並べるくん
+        役の判定くん
+        + 和了役一覧と飜数を返す(利用者の牌) : List<和了役一覧>
+    }
+}
+Api ..> Service
 package domain {
-    class 役の判定 {
-        上がった役を返す(List<String>) : List<String>
-    }
-    class 並べる {
-        牌の種類ごとに並べる(List<String>) : List<String>
-    }
-
-    package 役 {
-        enum 役一覧 {
-            白
-            發
-            中
-            + 役名,飜数(役) : Map<String,String>
-        }
-
-        class 役牌 {
-            is白(List<String>) : boolean
-            is發(List<String>) : boolean
-            is中(List<String>) : boolean
-        }
-    }
-
     package 牌 {
+        class 牌 {
+            牌の種類 : String
+        }
+        class 利用者のリクエストを牌に変換するくん {
+            変換した牌 : List<牌>
+            リクエストコードのチェック(List<String>)) : boolean
+            リクエストを牌に変換(List<利用者の牌>) : List<牌>
+        }
+        class 並べるくん {
+            並べたリスト : List<牌>
+            牌の種類ごとに並べる(List<牌>) : List<牌>
+        }
         package 数牌 {
+
             enum 索子 {
                 1索子
                 2索子
@@ -34,9 +59,14 @@ package domain {
                 7索子
                 8索子
                 9索子
-                {static} + 索子の抽出(List<String>) : List<String>
-                {static} - 索子か(String) : boolean
+                牌の種類() : String
+                牌の名前() : String
+                牌のリクエストコード() : String
+                {static} + 索子か(String) : boolean
+                {static} + 索子のうちどれか(String) : 索子
+                {static} + 19字牌か(牌) : boolean
             }
+
             enum 萬子 {
                 1萬子
                 2萬子
@@ -47,9 +77,15 @@ package domain {
                 7萬子
                 8萬子
                 9萬子
-                {static} + 萬子の抽出(List<String>) : List<String>
-                {static} - 萬子か(String) : boolean
+                牌の種類() : String
+                牌の名前() : String
+                牌のリクエストコード() : String
+                {static} + 萬子か(String) : boolean
+                {static} + 萬子のうちどれか(String) : 萬子
+                {static} + 19字牌か(牌) : boolean
+
             }
+
             enum 筒子 {
                 1筒子
                 2筒子
@@ -60,37 +96,228 @@ package domain {
                 7筒子
                 8筒子
                 9筒子
-                {static} + 筒子の抽出(List<String>) : List<String>
-                {static} - 筒子か(String) : boolean
+                牌の種類() : String
+                牌の名前() : String
+                牌のリクエストコード() : String
+                {static} + 萬子か(String) : boolean
+                {static} + 萬子のうちどれか(String) : 萬子
+                {static} + 19字牌か(牌) : boolean
+
             }
         }
+
         package 字牌 {
+
             enum 三元牌 {
                 白
                 發
                 中
-                {static} + 三元牌の抽出(List<String>) : List<String>
-                {static} + 白か(String) : boolean
-                {static} + 發か(String) : boolean
-                {static} + 中か(String) : boolean
+                牌の種類() : String
+                牌の名前() : String
+                牌のリクエストコード() : String
+                {static} + 三元牌か(String) : boolean
+                {static} + 三元牌のうちどれか(String) : 三元牌
             }
+
             enum 風牌 {
                 東
                 南
                 西
                 北
-                {static} + 風牌の抽出(List<String>) : List<String>
-                {static} - 風牌か(String) : boolean
+                牌の種類() : String
+                牌の名前() : String
+                牌のリクエストコード() : String
+                {static} + 風牌か(String) : boolean
+                {static} + 風牌のうちどれか(String) : 風牌
             }
         }
+        利用者のリクエストを牌に変換するくん .> 牌
+        利用者のリクエストを牌に変換するくん ...> 索子
+        利用者のリクエストを牌に変換するくん ...> 萬子
+        利用者のリクエストを牌に変換するくん ...> 筒子
+        利用者のリクエストを牌に変換するくん ...> 三元牌
+        利用者のリクエストを牌に変換するくん ...> 風牌
+        並べるくん ...> 索子
+        並べるくん ...> 萬子
+        並べるくん ...> 筒子
+        並べるくん ...> 三元牌
+        並べるくん ...> 風牌
     }
-    役の判定 --> 役牌
-    役牌 --> 役一覧
-    並べる --> 索子
-    並べる --> 萬子
-    並べる --> 筒子
-    並べる --> 三元牌
-    並べる --> 風牌
 }
+
+    package 役 {
+        class 和了役 {
+            役の名前 : String
+            役の飜数 : String
+        }
+        class 和了役一覧を返すくん {
+            役の判定くん
+'            和了役一覧
+            和了役一覧を返す(List<和了役>) : List<和了役一覧>
+        }
+        class 役の判定くん {
+            list : List<和了役>
+            和了役を返す(List<牌>) : List<和了役一覧>
+        }
+        class 和了役一覧 {
+            list : List<和了役>
+            和了一覧を入れる(List<和了一覧>) : 和了役一覧
+        }
+        和了役一覧を返すくん ..> 役の判定くん
+        役の判定くん ..> 和了役
+        package 役の判定 {
+            class 1飜の判定 {
+                is門前清自摸和():boolean
+                is立直(List<牌>):boolean
+                is一発(List<牌>):boolean
+                is役牌(List<牌>):boolean
+                is平和(List<牌>):boolean
+                is断么九(List<牌>):boolean
+                is一盃口(List<牌>):boolean
+                is海底摸月(List<牌>):boolean
+                is河底撈魚(List<牌>):boolean
+                is搶槓(List<牌>):boolean
+                is嶺上開花(List<牌>):boolean
+                is三色同順_鳴き(List<牌>):boolean
+                is一気通貫_鳴き(List<牌>):boolean
+                is全帯么九_鳴き(List<牌>):boolean
+            }
+            class 2飜の判定{
+                isダブル立直(List<牌>):boolean
+                is連風牌(List<牌>):boolean
+                is対々和(List<牌>):boolean
+                is三暗刻(List<牌>):boolean
+                is三色同刻(List<牌>):boolean
+                is三色同順(List<牌>):boolean
+                is三槓子(List<牌>):boolean
+                is小三元(List<牌>):boolean
+                is混老頭(List<牌>):boolean
+                is一気通貫(List<牌>):boolean
+                is全帯么九(List<牌>):boolean
+                is七対子(List<牌>):boolean
+                is純全帯么九_鳴き(List<牌>):boolean
+            }
+            class 3飜の判定{
+                is二盃口(List<牌>):boolean
+                is混一色(List<牌>):boolean
+                is純全帯么九(List<牌>):boolean
+            }
+            class 5飜の判定{
+                is清一色_鳴き(List<牌>):boolean
+            }
+            class 6飜の判定{
+                is清一色(List<牌>):boolean
+            }
+            class 役満の判定{
+                is天和(List<牌>):boolean
+                is地和(List<牌>):boolean
+                is国士無双(List<牌>):boolean
+                is四暗刻(List<牌>):boolean
+                is大三元(List<牌>):boolean
+                is緑一色(List<牌>):boolean
+                is字一色(List<牌>):boolean
+                is小四喜(List<牌>):boolean
+                is大四喜(List<牌>):boolean
+                is清老頭(List<牌>):boolean
+                is四槓子(List<牌>):boolean
+                is九蓮宝燈(List<牌>):boolean
+            }
+
+            役の判定くん ...> 1飜の判定
+            役の判定くん ..> 2飜の判定
+            役の判定くん ..> 3飜の判定
+            役の判定くん ..> 5飜の判定
+            役の判定くん ..> 6飜の判定
+            役の判定くん ..> 役満の判定
+
+        }
+        package 役一覧{
+            enum 1飜 {
+                門前清自摸和
+                立直
+                一発
+                役牌
+                平和
+                断么九
+                一盃口
+                海底摸月
+                河底撈魚
+                搶槓
+                嶺上開花
+                三色同順_鳴き
+                一気通貫_鳴き
+                全帯么九_鳴き
+                役名() : String
+                飜数() : int
+                飜数() : String
+            }
+            enum 2飜 {
+                ダブル立直
+                連風牌
+                対々和
+                三暗刻
+                三色同刻
+                三色同順
+                三槓子
+                小三元
+                混老頭
+                一気通貫
+                全帯么九
+                七対子
+                純全帯么九_鳴き
+                役名() : String
+                飜数() : int
+                飜数() : String
+            }
+            enum 3飜 {
+                二盃口
+                混一色
+                純全帯么九
+                役名() : String
+                飜数() : int
+                飜数() : String
+            }
+            enum 5飜 {
+                清一色_鳴き
+                役名() : String
+                飜数() : int
+                飜数() : String
+            }
+            enum 6飜 {
+                清一色
+                役名() : String
+                飜数() : int
+                飜数() : String
+            }
+            enum 役満 {
+                天和
+                地和
+                国士無双
+                四暗刻
+                大三元
+                緑一色
+                字一色
+                小四喜
+                大四喜
+                清老頭
+                四槓子
+                九蓮宝燈
+                役名() : String
+                飜数() : int
+                飜数() : String
+            }
+
+            役の判定くん ..> 1飜
+            役の判定くん ..> 2飜
+            役の判定くん ...> 3飜
+            役の判定くん ..> 5飜
+            役の判定くん ..> 6飜
+            役の判定くん ..> 役満
+        }
+
+    }
+Service ..> 和了役一覧を返すくん
+Service ..> 利用者のリクエストを牌に変換するくん
+Service ..> 並べるくん
 
 @enduml
