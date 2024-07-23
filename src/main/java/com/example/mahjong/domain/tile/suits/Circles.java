@@ -34,6 +34,16 @@ public enum Circles implements Tiles {
     }
 
     @Override
+    public boolean is白() {
+        return false;
+    }
+
+    @Override
+    public boolean is發() {
+        return false;
+    }
+
+    @Override
     public boolean is中() {
         return false;
     }

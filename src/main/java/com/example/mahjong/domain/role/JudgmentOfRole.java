@@ -30,22 +30,23 @@ public class  JudgmentOfRole{
      * @param arrangeList
      * @return
      */
+
     public List<WinningRole> 和了役と和飜数を判定(List<Tiles> arrangeList) {
         List<WinningRole> roleList = new ArrayList<>();
 
-//        if (yakuman.is大三元(arrangeList)){
-//            roleList.add(new WinningRole(Role.BIG_DRAGONS.getRoleName(), Role.BIG_DRAGONS.getWindshieldName()));
-//            // 役満なので、早期リターン
-//            return roleList;
-//        }
-//
-//        if (oneRole.is白(arrangeList)){
-//            roleList.add(Role.createRoleMap(Role.VAVUE_TIES_WHITE));
-//        }
-//
-//        if (oneRole.is發(arrangeList)){
-//            roleList.add(Role.createRoleMap(Role.VAVUE_TIES_GREEN));
-//        }
+        if (yakuman.is大三元(arrangeList)){
+            roleList.add(WinningRole.toWinningRole(Role.BIG_DRAGONS));
+            // 役満なので、早期リターン
+            return roleList;
+        }
+
+        if (oneRole.is白(arrangeList)){
+            roleList.add(WinningRole.toWinningRole(Role.VAVUE_TIES_WHITE));
+        }
+
+        if (oneRole.is發(arrangeList)){
+            roleList.add(WinningRole.toWinningRole(Role.VAVUE_TIES_GREEN));
+        }
 
         if (oneRole.is中(arrangeList)){
             roleList.add(WinningRole.toWinningRole(Role.VAVUE_TIES_RED));

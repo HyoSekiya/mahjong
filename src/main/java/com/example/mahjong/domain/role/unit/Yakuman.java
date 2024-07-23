@@ -12,12 +12,12 @@ import java.util.List;
 @AllArgsConstructor
 public class Yakuman {
 
-//    public boolean is大三元(List<Tiles> list){
-//        return list.stream().filter(Tiles::is中).count() == 3 &&
-//                list.stream().filter(Dragons::is發).count() == 3 &&
-//                list.stream().filter(Dragons::is白).count() == 3
-//                ;
-//    }
+    public boolean is大三元(List<Tiles> list){
+        return list.stream().filter(Tiles::is中).count() == 3 &&
+                list.stream().filter(Tiles::is發).count() == 3 &&
+                list.stream().filter(Tiles::is白).count() == 3
+                ;
+    }
 
 
 }

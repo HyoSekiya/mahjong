@@ -13,13 +13,13 @@ import java.util.List;
 @Component
 public class OneRole {
 
-//    public boolean is白(List<String> list){
-//        return list.stream().filter(Dragons::is白).count() == 3;
-//    }
-//
-//    public boolean is發(List<String> list){
-//        return list.stream().filter(Dragons::is發).count() == 3;
-//    }
+    public boolean is白(List<Tiles> list){
+        return list.stream().filter(Tiles::is白).count() == 3;
+    }
+
+    public boolean is發(List<Tiles> list){
+        return list.stream().filter(Tiles::is發).count() == 3;
+    }
 
     public boolean is中(List<Tiles> list){
         return list.stream().filter(Tiles::is中).count() == 3;

@@ -13,6 +13,10 @@ public interface Tiles {
 
     boolean is三元牌();
 
+    boolean is白();
+
+    boolean is發();
+
     boolean is中();
 
     boolean is萬子();

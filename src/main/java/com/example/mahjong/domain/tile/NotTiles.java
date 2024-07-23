@@ -1,6 +1,5 @@
 package com.example.mahjong.domain.tile;
 
-import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -17,6 +16,16 @@ public enum NotTiles implements Tiles {
 
     @Override
     public boolean is三元牌() {
+        return false;
+    }
+
+    @Override
+    public boolean is白() {
+        return false;
+    }
+
+    @Override
+    public boolean is發() {
         return false;
     }
 

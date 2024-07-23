@@ -32,6 +32,21 @@ public enum Dragons implements Tiles {
     }
 
     @Override
+    public boolean is白() {
+        return this.equals(WHITE_DRAGON);
+    }
+
+    @Override
+    public boolean is發() {
+        return this.equals(GREEN_DRAGON);
+    }
+
+    @Override
+    public boolean is中() {
+        return this.equals(RED_DRAGON);
+    }
+
+    @Override
     public boolean is萬子() {
         return false;
     }
@@ -44,11 +59,6 @@ public enum Dragons implements Tiles {
     @Override
     public boolean is筒子() {
         return false;
-    }
-
-    @Override
-    public boolean is中() {
-        return this.equals(RED_DRAGON);
     }
 
     public static int 三元牌に順序をつける(Dragons tiles){
