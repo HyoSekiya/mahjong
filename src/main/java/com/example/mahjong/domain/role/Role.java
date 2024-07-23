@@ -35,9 +35,9 @@ public enum Role {
     @Getter
     public final String windshieldName;
 
-    public static Map<String, String> createRoleMap(Role role) {
-        Map<String, String> map = new HashMap<>();
-        map.put(role.getRoleName(), role.windshieldName);
-        return map;
-    }
+//    public static Role createRoleMap(Role role) {
+//        Map<String, String> map = new HashMap<>();
+//        map.put(role.getRoleName(), role.windshieldName);
+//        return map;
+//    }
 }

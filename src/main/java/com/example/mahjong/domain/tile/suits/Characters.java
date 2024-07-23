@@ -1,17 +1,14 @@
 package com.example.mahjong.domain.tile.suits;
 
-import jdk.jshell.spi.ExecutionControl;
+import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.valuetiles.Winds;
 import lombok.AllArgsConstructor;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 萬子
  */
 @AllArgsConstructor
-public enum Characters{
+public enum Characters implements Tiles {
 
     ONE_CHARACTERS("1萬", "one_character"),
     TWO_CHARACTERS("2萬", "two_character"),
@@ -27,29 +24,38 @@ public enum Characters{
     public final String level;
     public final String apiCode;
 
-    private static boolean is萬子(String apiCode) {
-        for (Characters characters: Characters.values()){
-            if(apiCode.equals(characters.apiCode)){
-                return true;
-            }
-        }
-
+    @Override
+    public boolean is風牌() {
         return false;
     }
 
-    public static List<String> extraction(List<String> apicodeList){
-        return apicodeList.stream()
-                .filter(Characters::is萬子)
-                .sorted(Comparator.comparingInt(apiCode -> arrange(convertCharacters(apiCode))))
-                .collect(Collectors.toList());
+    @Override
+    public boolean is三元牌() {
+        return false;
     }
 
-    public static boolean is19字牌(String apiCode){
-        return apiCode.equals(ONE_CHARACTERS.apiCode) || apiCode.equals(NINE_CHARACTERS.apiCode);
+    @Override
+    public boolean is中() {
+        return false;
     }
 
-    public static int arrange (Characters characters){
-        return switch (characters){
+    @Override
+    public boolean is萬子() {
+        return true;
+    }
+
+    @Override
+    public boolean is索子() {
+        return false;
+    }
+
+    @Override
+    public boolean is筒子() {
+        return false;
+    }
+
+    public static int 萬子に順序をつける(Characters tiles){
+        return switch (tiles) {
             case ONE_CHARACTERS -> 1;
             case TWO_CHARACTERS -> 2;
             case THREE_CHARACTERS -> 3;
@@ -60,14 +66,5 @@ public enum Characters{
             case EIGHT_CHARACTERS -> 8;
             case NINE_CHARACTERS -> 9;
         };
-    }
-
-    public static Characters convertCharacters(String apiCode){
-        for (Characters characters: Characters.values()){
-            if (characters.apiCode.equals(apiCode)){
-                return characters;
-            }
-        }
-        throw new RuntimeException(apiCode + "は萬子ではないので、変換できません");
     }
 }

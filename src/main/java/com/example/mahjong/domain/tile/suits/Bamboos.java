@@ -1,16 +1,13 @@
 package com.example.mahjong.domain.tile.suits;
 
+import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  *　索子
  */
 @AllArgsConstructor
-public enum Bamboos {
+public enum Bamboos implements Tiles {
 
     ONE_BAMBOOS("1索", "one_bamboo"),
     TWO_BAMBOOS("2索", "two_bamboo"),
@@ -23,32 +20,43 @@ public enum Bamboos {
     NINE_BAMBOOS("9索", "nine_bamboo"),
     ;
 
+
     public final String level;
 
     public final String apiCode;
 
-    private static boolean is索子(String apiCode) {
-        for (Bamboos bamboos: Bamboos.values()) {
-            if (bamboos.apiCode.equals(apiCode)){
-                return true;
-            }
-        }
+    @Override
+    public boolean is風牌() {
         return false;
     }
 
-    public static List<String> extraction(List<String> apiCodeList){
-        return apiCodeList.stream()
-                .filter(Bamboos::is索子)
-                .sorted(Comparator.comparingInt(apiCode -> arrange(convertBamboos(apiCode))))
-                .collect(Collectors.toList());
+    @Override
+    public boolean is三元牌() {
+        return false;
     }
 
-    public static boolean is19字牌(String apiCode){
-        return apiCode.equals(ONE_BAMBOOS.apiCode) || apiCode.equals(NINE_BAMBOOS.apiCode);
+    @Override
+    public boolean is中() {
+        return false;
     }
 
-    public static int arrange (Bamboos bamboos){
-        return switch (bamboos){
+    @Override
+    public boolean is萬子() {
+        return false;
+    }
+
+    @Override
+    public boolean is索子() {
+        return true;
+    }
+
+    @Override
+    public boolean is筒子() {
+        return false;
+    }
+
+    public static int 索子に順序をつける(Bamboos tiles) {
+        return switch (tiles) {
             case ONE_BAMBOOS -> 1;
             case TWO_BAMBOOS -> 2;
             case THREE_BAMBOOS -> 3;
@@ -59,14 +67,5 @@ public enum Bamboos {
             case EIGHT_BAMBOOS -> 8;
             case NINE_BAMBOOS -> 9;
         };
-    }
-
-    public static Bamboos convertBamboos(String apiCode){
-        for (Bamboos bamboos: Bamboos.values()){
-            if (bamboos.apiCode.equals(apiCode)){
-                return bamboos;
-            }
-        }
-        throw new RuntimeException(apiCode + "は索子ではないので、変換できません");
     }
 }

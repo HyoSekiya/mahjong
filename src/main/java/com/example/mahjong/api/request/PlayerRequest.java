@@ -1,7 +1,6 @@
 package com.example.mahjong.api.request;
 
 
-import com.example.mahjong.domain.tile.valuetiles.Winds;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -11,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString(includeFieldNames = false)
-public class MahjongRequest {
+public class PlayerRequest {
 
     private String one;
     private String two;
@@ -28,6 +27,9 @@ public class MahjongRequest {
     private String thirteen;
     private String fourteen;
 
+    /**
+     * 利用者の牌を作成
+     */
     public List<String> create(){
         List<String> list = new ArrayList<>();
 

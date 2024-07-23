@@ -1,16 +1,13 @@
 package com.example.mahjong.domain.tile.suits;
 
+import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 筒子
  */
 @AllArgsConstructor
-public enum Circles {
+public enum Circles implements Tiles {
 
     ONE_CIRCLES("1筒", "one_circle"),
     TWO_CIRCLES("2筒", "two_circle"),
@@ -26,28 +23,38 @@ public enum Circles {
     public final String level;
     public final String apiCode;
 
-    private static boolean is筒子(String apiCode) {
-        for(Circles circles: Circles.values()){
-            if (circles.apiCode.equals(apiCode)){
-                return true;
-            }
-        }
+    @Override
+    public boolean is風牌() {
         return false;
     }
 
-    public static List<String> extraction(List<String> apiCodeList){
-        return apiCodeList.stream()
-                .filter(Circles::is筒子)
-                .sorted(Comparator.comparingInt(apiCode -> arrange(convertCircles(apiCode))))
-                .collect(Collectors.toList());
+    @Override
+    public boolean is三元牌() {
+        return false;
     }
 
-    public static boolean is19字牌(String apiCode){
-        return apiCode.equals(ONE_CIRCLES.apiCode) || apiCode.equals(NINE_CIRCLES.apiCode);
+    @Override
+    public boolean is中() {
+        return false;
     }
 
-    public static int arrange (Circles circles){
-        return switch (circles){
+    @Override
+    public boolean is萬子() {
+        return false;
+    }
+
+    @Override
+    public boolean is索子() {
+        return false;
+    }
+
+    @Override
+    public boolean is筒子() {
+        return true;
+    }
+
+    public static int 筒子に順序をつける(Circles tiles) {
+        return switch (tiles) {
             case ONE_CIRCLES -> 1;
             case TWO_CIRCLES -> 2;
             case THREE_CIRCLES -> 3;
@@ -58,14 +65,5 @@ public enum Circles {
             case EIGHT_CIRCLES -> 8;
             case NINE_CIRCLES -> 9;
         };
-    }
-
-    public static Circles convertCircles(String apiCode){
-        for (Circles circles: Circles.values()){
-            if (circles.apiCode.equals(apiCode)){
-                return circles;
-            }
-        }
-        throw new RuntimeException(apiCode + "は筒子ではないので、変換できません");
     }
 }
