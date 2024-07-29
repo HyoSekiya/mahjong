@@ -65,8 +65,27 @@ public enum Bamboos implements Tiles {
         return false;
     }
 
-    public static int 索子に順序をつける(Bamboos tiles) {
-        return switch (tiles) {
+    @Override
+    public boolean is19字牌() {
+        return switch (this) {
+            case ONE_BAMBOOS -> false;
+            case NINE_BAMBOOS -> false;
+            default -> true;
+        };
+    }
+
+    @Override
+    public boolean isNot19字牌() {
+        return !(is19字牌());
+    }
+
+    @Override
+    public boolean is順子() {
+        return false;
+    }
+
+    public int 索子に順序をつける() {
+        return switch (this) {
             case ONE_BAMBOOS -> 1;
             case TWO_BAMBOOS -> 2;
             case THREE_BAMBOOS -> 3;

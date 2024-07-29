@@ -61,8 +61,23 @@ public enum Dragons implements Tiles {
         return false;
     }
 
-    public static int 三元牌に順序をつける(Dragons tiles){
-        return switch (tiles) {
+    @Override
+    public boolean is19字牌() {
+        return false;
+    }
+
+    @Override
+    public boolean isNot19字牌() {
+        return true;
+    }
+
+    @Override
+    public boolean is順子() {
+        return false;
+    }
+
+    public int 三元牌に順序をつける(){
+        return switch (this) {
             case WHITE_DRAGON -> 1;
             case GREEN_DRAGON -> 2;
             case RED_DRAGON -> 3;

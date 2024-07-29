@@ -35,7 +35,6 @@ public class MahjongApi {
         return 並べる;
     }
 
-
     @PostMapping("/sum")
     public List<Map<String, String>> mahjong(@RequestBody PlayerRequest request){
 

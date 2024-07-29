@@ -58,8 +58,23 @@ public enum Winds implements Tiles {
         return false;
     }
 
-    public static int 風牌に順序をつける(Winds tiles){
-        return switch (tiles) {
+    @Override
+    public boolean is19字牌() {
+        return false;
+    }
+
+    @Override
+    public boolean isNot19字牌() {
+        return true;
+    }
+
+    @Override
+    public boolean is順子() {
+        return false;
+    }
+
+    public int 風牌に順序をつける(){
+        return switch (this) {
             case EAST -> 1;
             case SOUTH -> 2;
             case WEST -> 3;

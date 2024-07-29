@@ -1,7 +1,6 @@
 package com.example.mahjong.domain.tile.suits;
 
 import com.example.mahjong.domain.tile.Tiles;
-import com.example.mahjong.domain.tile.valuetiles.Winds;
 import lombok.AllArgsConstructor;
 
 /**
@@ -64,8 +63,27 @@ public enum Characters implements Tiles {
         return false;
     }
 
-    public static int 萬子に順序をつける(Characters tiles){
-        return switch (tiles) {
+    @Override
+    public boolean is19字牌() {
+        return switch (this) {
+            case ONE_CHARACTERS -> true;
+            case NINE_CHARACTERS -> true;
+            default -> false;
+        };
+    }
+
+    @Override
+    public boolean isNot19字牌() {
+        return !(is19字牌());
+    }
+
+    @Override
+    public boolean is順子() {
+        return false;
+    }
+
+    public int 萬子に順序をつける(){
+        return switch (this) {
             case ONE_CHARACTERS -> 1;
             case TWO_CHARACTERS -> 2;
             case THREE_CHARACTERS -> 3;

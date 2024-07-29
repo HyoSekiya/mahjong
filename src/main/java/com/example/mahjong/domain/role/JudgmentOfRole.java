@@ -1,16 +1,15 @@
 package com.example.mahjong.domain.role;
 
 import com.example.mahjong.domain.role.unit.OneRole;
+import com.example.mahjong.domain.role.unit.TwoRole;
 import com.example.mahjong.domain.role.unit.Yakuman;
 import com.example.mahjong.domain.tile.Tiles;
-import jakarta.servlet.annotation.WebInitParam;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Component
 @AllArgsConstructor
@@ -22,6 +21,8 @@ public class  JudgmentOfRole{
     private final Yakuman yakuman;
 
     private final OneRole oneRole;
+
+    private final TwoRole twoRole;
 
     /**
      * 役の判定をして、Map<String,String>で返す
@@ -51,10 +52,14 @@ public class  JudgmentOfRole{
         if (oneRole.is中(arrangeList)){
             roleList.add(WinningRole.toWinningRole(Role.VAVUE_TIES_RED));
         }
-//
-//        if (oneRole.isタンヤオ(arrangeList)){
-//            roleList.add(Role.createRoleMap(Role.All_SIMPLES));
-//        }
+
+        if (oneRole.isタンヤオ(arrangeList)){
+            roleList.add(WinningRole.toWinningRole(Role.All_SIMPLES));
+        }
+
+        if (twoRole.is三色同順(arrangeList)){
+            roleList.add(WinningRole.toWinningRole(Role.THREE_CONCEALED_TRIPLES));
+        }
 
         return roleList;
     }

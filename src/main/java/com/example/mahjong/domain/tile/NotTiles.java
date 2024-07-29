@@ -48,4 +48,19 @@ public enum NotTiles implements Tiles {
     public boolean is筒子() {
         return false;
     }
+
+    @Override
+    public boolean is19字牌() {
+        return false;
+    }
+
+    @Override
+    public boolean isNot19字牌() {
+        return false;
+    }
+
+    @Override
+    public boolean is順子() {
+        return false;
+    }
 }

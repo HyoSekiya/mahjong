@@ -63,8 +63,27 @@ public enum Circles implements Tiles {
         return true;
     }
 
-    public static int 筒子に順序をつける(Circles tiles) {
-        return switch (tiles) {
+    @Override
+    public boolean is19字牌() {
+        return switch (this){
+            case ONE_CIRCLES -> false;
+            case NINE_CIRCLES -> false;
+            default -> true;
+        };
+    }
+
+    @Override
+    public boolean isNot19字牌() {
+        return !(is19字牌());
+    }
+
+    @Override
+    public boolean is順子() {
+        return false;
+    }
+
+    public int 筒子に順序をつける() {
+        return switch (this) {
             case ONE_CIRCLES -> 1;
             case TWO_CIRCLES -> 2;
             case THREE_CIRCLES -> 3;

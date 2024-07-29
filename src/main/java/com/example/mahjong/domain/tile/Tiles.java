@@ -25,4 +25,9 @@ public interface Tiles {
 
     boolean is筒子();
 
+    boolean is19字牌();
+
+    boolean isNot19字牌();
+
+    boolean is順子();
 }

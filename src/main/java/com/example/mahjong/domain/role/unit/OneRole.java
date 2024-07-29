@@ -9,9 +9,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class OneRole {
+
+    private final int 和了牌の数 = 14;
 
     public boolean is白(List<Tiles> list){
         return list.stream().filter(Tiles::is白).count() == 3;
@@ -25,26 +28,18 @@ public class OneRole {
         return list.stream().filter(Tiles::is中).count() == 3;
     }
 
-//    public boolean isタンヤオ(List<String> list){
-//
-//        if (!this.is33332(list)){
-//            return false;
-//        }
-//
-//        List<String> resultList = new ArrayList<>();
-//
-//        List<String> bamboosList = list.stream().filter(Bamboos::is19字牌).toList();
-//        List<String> charactersList = list.stream().filter(Characters::is19字牌).toList();
-//        List<String> circlesList = list.stream().filter(Circles::is19字牌).toList();
-//
-//        resultList.addAll(bamboosList);
-//        resultList.addAll(charactersList);
-//        resultList.addAll(circlesList);
-//
-//        return resultList.isEmpty();
-//    }
-//
-//    public boolean is33332(List<String> list){
-//        return true;
-//    }
+    public boolean isタンヤオ(List<Tiles> list){
+
+        if (!this.is33332(list)){
+            return false;
+        }
+
+        return list.stream().
+                filter(Tiles::isNot19字牌)
+                .count() == 和了牌の数;
+    }
+
+    public boolean is33332(List<Tiles> list){
+        return true;
+    }
 }

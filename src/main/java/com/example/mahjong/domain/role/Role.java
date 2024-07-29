@@ -14,6 +14,7 @@ public enum Role {
     VAVUE_TIES_GREEN("發",1,"1飜"),
     VAVUE_TIES_RED("中",1,"1飜"),
     All_SIMPLES("タンヤオ", 1, "1飜"),
+    THREE_CONCEALED_TRIPLES("三色同順", 2, "2飜"),
     BIG_DRAGONS("大三元", 13, "13飜")
 
 
