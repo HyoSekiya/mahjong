@@ -1,7 +1,11 @@
 package com.example.mahjong.domain.tile.suits;
 
+import com.example.mahjong.domain.role.Chow;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 萬子
@@ -75,11 +79,6 @@ public enum Characters implements Tiles {
     @Override
     public boolean isNot19字牌() {
         return !(is19字牌());
-    }
-
-    @Override
-    public boolean is順子() {
-        return false;
     }
 
     public int 萬子に順序をつける(){

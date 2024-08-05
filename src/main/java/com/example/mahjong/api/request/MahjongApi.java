@@ -25,16 +25,6 @@ public class MahjongApi {
     @Autowired
     private final RequestConvertor convertor;
 
-    @PostMapping("/list")
-    public List<Tiles> List(@RequestBody PlayerRequest request){
-
-        List<Tiles> 利用者の配牌 = this.利用者の配牌に変換(request.create());
-
-        List<Tiles> 並べる = service.並べる(利用者の配牌);
-
-        return 並べる;
-    }
-
     @PostMapping("/sum")
     public List<Map<String, String>> mahjong(@RequestBody PlayerRequest request){
 

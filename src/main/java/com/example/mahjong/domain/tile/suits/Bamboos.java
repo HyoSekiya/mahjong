@@ -2,7 +2,6 @@ package com.example.mahjong.domain.tile.suits;
 
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
-
 /**
  *　索子
  */
@@ -77,11 +76,6 @@ public enum Bamboos implements Tiles {
     @Override
     public boolean isNot19字牌() {
         return !(is19字牌());
-    }
-
-    @Override
-    public boolean is順子() {
-        return false;
     }
 
     public int 索子に順序をつける() {

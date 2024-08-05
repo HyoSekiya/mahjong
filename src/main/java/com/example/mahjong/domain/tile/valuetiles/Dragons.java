@@ -1,8 +1,11 @@
 package com.example.mahjong.domain.tile.valuetiles;
 
+import com.example.mahjong.domain.role.Chow;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+
+import java.util.List;
 
 /**
  * Dragons(三元牌)
@@ -69,11 +72,6 @@ public enum Dragons implements Tiles {
     @Override
     public boolean isNot19字牌() {
         return true;
-    }
-
-    @Override
-    public boolean is順子() {
-        return false;
     }
 
     public int 三元牌に順序をつける(){

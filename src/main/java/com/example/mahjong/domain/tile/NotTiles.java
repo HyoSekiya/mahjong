@@ -1,6 +1,9 @@
 package com.example.mahjong.domain.tile;
 
+import com.example.mahjong.domain.role.Chow;
 import lombok.AllArgsConstructor;
+
+import java.util.List;
 
 @AllArgsConstructor
 public enum NotTiles implements Tiles {
@@ -56,11 +59,6 @@ public enum NotTiles implements Tiles {
 
     @Override
     public boolean isNot19字牌() {
-        return false;
-    }
-
-    @Override
-    public boolean is順子() {
         return false;
     }
 }

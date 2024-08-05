@@ -3,6 +3,7 @@ package com.example.mahjong.domain.tile.valuetiles;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 
+
 /**
  * Winds(風牌)
  */
@@ -66,11 +67,6 @@ public enum Winds implements Tiles {
     @Override
     public boolean isNot19字牌() {
         return true;
-    }
-
-    @Override
-    public boolean is順子() {
-        return false;
     }
 
     public int 風牌に順序をつける(){
