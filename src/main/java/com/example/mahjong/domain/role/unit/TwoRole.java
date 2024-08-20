@@ -18,29 +18,80 @@ public class TwoRole {
             return false;
         }
 
-        if (is三色同順(chowList, Chow.三色同順_123())) {
+        if (is三色同順(chowList, 三色同順_123())) {
             return true;
-        } else if (is三色同順(chowList, Chow.三色同順_234())) {
+        } else if (is三色同順(chowList, 三色同順_234())) {
             return true;
-        } else if (is三色同順(chowList, Chow.三色同順_345())) {
+        } else if (is三色同順(chowList, 三色同順_345())) {
             return true;
-        } else if (is三色同順(chowList, Chow.三色同順_456())) {
+        } else if (is三色同順(chowList, 三色同順_456())) {
             return true;
-        } else if (is三色同順(chowList, Chow.三色同順_567())) {
+        } else if (is三色同順(chowList, 三色同順_567())) {
             return true;
-        } else if (is三色同順(chowList, Chow.三色同順_678())) {
+        } else if (is三色同順(chowList, 三色同順_678())) {
             return true;
-        } else if (is三色同順(chowList, Chow.三色同順_789())) {
+        } else if (is三色同順(chowList, 三色同順_789())) {
             return true;
         } else {
             return false;
         }
     }
 
-    private boolean is三色同順(List<Chow> resultList, List<Chow> subjectList){
+    public static List<Chow> 三色同順_123(){
+        List<Chow> chowslist = List.of(
+                Chow.萬子123, Chow.索子123, Chow.索子123
+        );
+
+        return chowslist;
+    }
+
+    public static List<Chow> 三色同順_234(){
+        List<Chow> chowslist = List.of(
+                Chow.萬子234, Chow.索子234, Chow.索子234
+        );
+
+        return chowslist;
+    }
+    public static List<Chow> 三色同順_345(){
+        List<Chow> chowslist = List.of(
+                Chow.萬子345, Chow.索子345, Chow.索子345
+        );
+
+        return chowslist;
+    }
+    public static List<Chow> 三色同順_456(){
+        List<Chow> chowslist = List.of(
+                Chow.萬子456, Chow.索子456, Chow.索子456
+        );
+
+        return chowslist;
+    }
+    public static List<Chow> 三色同順_567(){
+        List<Chow> chowslist = List.of(
+                Chow.萬子567, Chow.索子567, Chow.索子567
+        );
+
+        return chowslist;
+    }
+    public static List<Chow> 三色同順_678(){
+        List<Chow> chowslist = List.of(
+                Chow.萬子678, Chow.索子678, Chow.索子678
+        );
+
+        return chowslist;
+    }
+    public static List<Chow> 三色同順_789(){
+        List<Chow> chowslist = List.of(
+                Chow.萬子789, Chow.索子789, Chow.索子789
+        );
+
+        return chowslist;
+    }
+
+    private boolean is三色同順(List<Chow> chowList, List<Chow> subjectList){
 
         for(Chow subject : subjectList){
-            if (!(resultList.contains(subject))) {
+            if (!(chowList.contains(subject))) {
                 return false;
             }
         }

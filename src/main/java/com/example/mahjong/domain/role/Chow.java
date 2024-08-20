@@ -48,57 +48,6 @@ public enum Chow {
     筒子678,
     筒子789;
 
-    public static List<Chow> 三色同順_123(){
-        List<Chow> chowslist = List.of(
-                萬子123, 索子123, 索子123
-        );
-
-        return chowslist;
-    }
-
-    public static List<Chow> 三色同順_234(){
-        List<Chow> chowslist = List.of(
-                萬子234, 索子234, 索子234
-        );
-
-        return chowslist;
-    }
-    public static List<Chow> 三色同順_345(){
-        List<Chow> chowslist = List.of(
-                萬子345, 索子345, 索子345
-        );
-
-        return chowslist;
-    }
-    public static List<Chow> 三色同順_456(){
-        List<Chow> chowslist = List.of(
-                萬子456, 索子456, 索子456
-        );
-
-        return chowslist;
-    }
-    public static List<Chow> 三色同順_567(){
-        List<Chow> chowslist = List.of(
-                萬子567, 索子567, 索子567
-        );
-
-        return chowslist;
-    }
-    public static List<Chow> 三色同順_678(){
-        List<Chow> chowslist = List.of(
-                萬子678, 索子678, 索子678
-        );
-
-        return chowslist;
-    }
-    public static List<Chow> 三色同順_789(){
-        List<Chow> chowslist = List.of(
-                萬子789, 索子789, 索子789
-        );
-
-        return chowslist;
-    }
-
     /**
      * 配牌の中にどの組み合わせの順子が含まれているか
      */

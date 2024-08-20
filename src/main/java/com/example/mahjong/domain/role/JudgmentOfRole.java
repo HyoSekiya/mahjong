@@ -36,32 +36,36 @@ public class  JudgmentOfRole{
         List<WinningRole> roleList = new ArrayList<>();
 
         if (yakuman.is大三元(arrangeList)){
-            roleList.add(WinningRole.toWinningRole(Role.BIG_DRAGONS));
+            roleList.add(addWinningRole(Role.BIG_DRAGONS));
             // 役満なので、早期リターン
             return roleList;
         }
 
         if (oneRole.is白(arrangeList)){
-            roleList.add(WinningRole.toWinningRole(Role.VAVUE_TIES_WHITE));
+            roleList.add(addWinningRole(Role.VAVUE_TIES_WHITE));
         }
 
         if (oneRole.is發(arrangeList)){
-            roleList.add(WinningRole.toWinningRole(Role.VAVUE_TIES_GREEN));
+            roleList.add(addWinningRole(Role.VAVUE_TIES_GREEN));
         }
 
         if (oneRole.is中(arrangeList)){
-            roleList.add(WinningRole.toWinningRole(Role.VAVUE_TIES_RED));
+            roleList.add(addWinningRole(Role.VAVUE_TIES_RED));
         }
 
         if (oneRole.isタンヤオ(arrangeList)){
-            roleList.add(WinningRole.toWinningRole(Role.All_SIMPLES));
+            roleList.add(addWinningRole(Role.All_SIMPLES));
         }
 
         if (twoRole.is三色同順(arrangeList)){
-            roleList.add(WinningRole.toWinningRole(Role.THREE_CONCEALED_TRIPLES));
+            roleList.add(addWinningRole(Role.THREE_CONCEALED_TRIPLES));
         }
 
         return roleList;
+    }
+
+    private WinningRole addWinningRole(Role role) {
+        return WinningRole.toWinningRole(role);
     }
 
 
