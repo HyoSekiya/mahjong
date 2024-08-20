@@ -1,4 +1,4 @@
-package com.example.mahjong.domain.role;
+package com.example.mahjong.domain.role.face;
 
 import com.example.mahjong.domain.tile.Tiles;
 import com.example.mahjong.domain.tile.suits.Bamboos;

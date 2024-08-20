@@ -1,4 +1,4 @@
-package com.example.mahjong.domain.role;
+package com.example.mahjong.domain.role.face;
 
 import com.example.mahjong.domain.tile.Tiles;
 import com.example.mahjong.domain.tile.suits.Bamboos;
@@ -7,7 +7,6 @@ import com.example.mahjong.domain.tile.suits.Circles;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * 順子（シュンツ）
