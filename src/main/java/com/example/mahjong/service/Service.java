@@ -23,7 +23,7 @@ public class Service {
      */
     private final JudgmentOfRole judgmentOfRole;
 
-    public Response 和了役と飜数を返す(List<Tiles> tilesList){
+    public List<WinningRole> 和了役と飜数を返す(List<Tiles> tilesList){
 
         // 利用者の配牌を並べる
         List<Tiles> arrangeList = arrange.並べる(tilesList);
@@ -34,7 +34,7 @@ public class Service {
             throw new RuntimeException("役無し！！！チョンボ！！！");
         }
 
-        return Response.toResponse(list);
+        return list;
 
     }
 

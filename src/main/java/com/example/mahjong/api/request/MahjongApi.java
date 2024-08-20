@@ -1,6 +1,7 @@
 package com.example.mahjong.api.request;
 
 import com.example.mahjong.api.response.Response;
+import com.example.mahjong.domain.role.WinningRole;
 import com.example.mahjong.domain.tile.Tiles;
 import com.example.mahjong.service.Service;
 import lombok.RequiredArgsConstructor;
@@ -28,14 +29,14 @@ public class MahjongApi {
     @PostMapping("/sum")
     public List<Map<String, String>> mahjong(@RequestBody PlayerRequest request){
 
-        List<Tiles> 利用者の配牌 = this.利用者の配牌に変換(request.create());
+        List<Tiles> 利用者の配牌 = this.利用者の牌を牌に変換(request.create());
 
-        Response response = service.和了役と飜数を返す(利用者の配牌);
+        List<WinningRole> response = service.和了役と飜数を返す(利用者の配牌);
 
-        return response.getResponse();
+        return Response.toResponse(response);
     }
 
-    private List<Tiles> 利用者の配牌に変換(List<String> playerRequest) {
+    private List<Tiles> 利用者の牌を牌に変換(List<String> playerRequest) {
 
         return convertor.利用者の牌を牌に変換(playerRequest);
     }

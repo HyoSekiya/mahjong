@@ -15,16 +15,12 @@ public class Response {
         this.returnList = returnList;
     }
 
-    public static Response toResponse(List<WinningRole> winningRolelist){
+    public static List<Map<String, String>> toResponse(List<WinningRole> winningRolelist){
         List<Map<String, String>> returnList = winningRolelist
                 .stream()
                 .map(WinningRole::getReturnList)
                 .collect(Collectors.toList());
 
-        return new Response(returnList);
-    }
-
-    public List<Map<String, String>> getResponse() {
-        return this.returnList;
+        return new Response(returnList).returnList;
     }
 }

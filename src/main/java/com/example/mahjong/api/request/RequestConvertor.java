@@ -19,14 +19,6 @@ public class RequestConvertor {
     private final TilesRole tilesRole;
     public List<Tiles> 利用者の牌を牌に変換(List<String> playerRequest) {
 
-        if (is少牌(playerRequest)){
-            throw new RuntimeException("少牌！！！！");
-        }
-
-        if (is多牌(playerRequest)){
-            throw new RuntimeException("多牌！！！！");
-        }
-
         List<Tiles> tilesList = new ArrayList<>();
 
         /**
