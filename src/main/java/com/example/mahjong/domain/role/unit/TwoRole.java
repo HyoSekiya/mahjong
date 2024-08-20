@@ -1,19 +1,31 @@
 package com.example.mahjong.domain.role.unit;
 
 import com.example.mahjong.domain.role.face.Chow;
+import com.example.mahjong.domain.role.face.Pung;
+import com.example.mahjong.domain.role.face.Win;
 import com.example.mahjong.domain.tile.Tiles;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
+@AllArgsConstructor
 public class TwoRole {
+
+    private final Win win;
 
     public boolean is三色同順(List<Tiles> list){
         List<Chow> chowList = Chow.whichChowsAreIncluded(list);
+        List<Pung> pungList = Pung.whichPungsAreIncluded(list);
 
         // 順子がなかったら、false
         if (chowList.isEmpty()){
+            return false;
+        }
+
+        // 3,3,3,3,2ではに場合、false
+        if (win.isNot33332(list, chowList, pungList)){
             return false;
         }
 

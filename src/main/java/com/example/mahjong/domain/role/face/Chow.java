@@ -4,6 +4,7 @@ import com.example.mahjong.domain.tile.Tiles;
 import com.example.mahjong.domain.tile.suits.Bamboos;
 import com.example.mahjong.domain.tile.suits.Characters;
 import com.example.mahjong.domain.tile.suits.Circles;
+import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * 順子（シュンツ）
  */
+@AllArgsConstructor
 public enum Chow {
 
     /*
@@ -23,29 +25,33 @@ public enum Chow {
     萬子（7, 8, 9）、筒子（7, 8, 9）、索子（7, 8, 9）
      */
 
-    萬子123,
-    萬子234,
-    萬子345,
-    萬子456,
-    萬子567,
-    萬子678,
-    萬子789,
+    萬子123(Characters.ONE_CHARACTERS, Characters.TWO_CHARACTERS, Characters.THREE_CHARACTERS),
+    萬子234(Characters.TWO_CHARACTERS, Characters.THREE_CHARACTERS, Characters.FOUR_CHARACTERS),
+    萬子345(Characters.THREE_CHARACTERS, Characters.FOUR_CHARACTERS, Characters.FIVE_CHARACTERS),
+    萬子456(Characters.FOUR_CHARACTERS, Characters.FIVE_CHARACTERS, Characters.SIX_CHARACTERS),
+    萬子567(Characters.FIVE_CHARACTERS, Characters.SIX_CHARACTERS, Characters.SEVEN_CHARACTERS),
+    萬子678(Characters.SIX_CHARACTERS, Characters.SEVEN_CHARACTERS, Characters.EIGHT_CHARACTERS),
+    萬子789(Characters.SEVEN_CHARACTERS, Characters.EIGHT_CHARACTERS, Characters.NINE_CHARACTERS),
 
-    索子123,
-    索子234,
-    索子345,
-    索子456,
-    索子567,
-    索子678,
-    索子789,
+    索子123(Bamboos.ONE_BAMBOOS, Bamboos.TWO_BAMBOOS, Bamboos.THREE_BAMBOOS),
+    索子234(Bamboos.TWO_BAMBOOS, Bamboos.THREE_BAMBOOS, Bamboos.FOUR_BAMBOOS),
+    索子345(Bamboos.THREE_BAMBOOS, Bamboos.FOUR_BAMBOOS, Bamboos.FIVE_BAMBOOS),
+    索子456(Bamboos.FOUR_BAMBOOS, Bamboos.FIVE_BAMBOOS, Bamboos.SIX_BAMBOOS),
+    索子567(Bamboos.FIVE_BAMBOOS, Bamboos.SIX_BAMBOOS, Bamboos.SEVEN_BAMBOOS),
+    索子678(Bamboos.SIX_BAMBOOS, Bamboos.SEVEN_BAMBOOS, Bamboos.EIGHT_BAMBOOS),
+    索子789(Bamboos.SEVEN_BAMBOOS, Bamboos.EIGHT_BAMBOOS, Bamboos.NINE_BAMBOOS),
 
-    筒子123,
-    筒子234,
-    筒子345,
-    筒子456,
-    筒子567,
-    筒子678,
-    筒子789;
+    筒子123(Circles.ONE_CIRCLES, Circles.TWO_CIRCLES, Circles.THREE_CIRCLES),
+    筒子234(Circles.TWO_CIRCLES, Circles.THREE_CIRCLES, Circles.FOUR_CIRCLES),
+    筒子345(Circles.THREE_CIRCLES, Circles.FOUR_CIRCLES, Circles.FIVE_CIRCLES),
+    筒子456(Circles.FOUR_CIRCLES, Circles.FIVE_CIRCLES, Circles.SIX_CIRCLES),
+    筒子567(Circles.FIVE_CIRCLES, Circles.SIX_CIRCLES, Circles.SEVEN_CIRCLES),
+    筒子678(Circles.SIX_CIRCLES, Circles.SEVEN_CIRCLES, Circles.EIGHT_CIRCLES),
+    筒子789(Circles.SEVEN_CIRCLES, Circles.EIGHT_CIRCLES, Circles.NINE_CIRCLES);
+
+    public Tiles chow1;
+    public Tiles chow2;
+    public Tiles chow3;
 
     /**
      * 配牌の中にどの組み合わせの順子が含まれているか
