@@ -10,6 +10,9 @@ import com.example.mahjong.domain.tile.valuetiles.Winds;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
+/**
+ * 牌に変換くん
+ */
 @Component
 @AllArgsConstructor
 public class TilesRole {

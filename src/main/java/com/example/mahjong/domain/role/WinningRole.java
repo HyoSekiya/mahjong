@@ -5,6 +5,9 @@ import lombok.Getter;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 和了役と和飜数
+ */
 public class WinningRole {
 
     @Getter
