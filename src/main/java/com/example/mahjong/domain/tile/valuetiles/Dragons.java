@@ -1,11 +1,8 @@
 package com.example.mahjong.domain.tile.valuetiles;
 
-import com.example.mahjong.domain.role.Chow;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import java.util.List;
 
 /**
  * Dragons(三元牌)

@@ -1,9 +1,6 @@
 package com.example.mahjong.domain.tile;
 
-import com.example.mahjong.domain.role.Chow;
 import lombok.AllArgsConstructor;
-
-import java.util.List;
 
 @AllArgsConstructor
 public enum NotTiles implements Tiles {

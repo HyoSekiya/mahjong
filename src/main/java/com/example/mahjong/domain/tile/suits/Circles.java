@@ -1,10 +1,7 @@
 package com.example.mahjong.domain.tile.suits;
 
-import com.example.mahjong.domain.role.Chow;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
-
-import java.util.List;
 
 /**
  * 筒子

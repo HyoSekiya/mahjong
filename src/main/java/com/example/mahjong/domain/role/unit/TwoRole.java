@@ -1,11 +1,10 @@
 package com.example.mahjong.domain.role.unit;
 
-import com.example.mahjong.domain.role.Chow;
+import com.example.mahjong.domain.role.face.Chow;
 import com.example.mahjong.domain.tile.Tiles;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class TwoRole {

@@ -159,6 +159,8 @@ package domain {
             役の飜数 : String
         }
         class 役の判定くん {
+            順子
+            刻子
             役満の判定
             1飜の判定
             2飜の判定
@@ -168,6 +170,18 @@ package domain {
             和了役を返す(List<牌>) : List<和了役>
         }
         役の判定くん .> 和了役
+        役の判定くん .> 面子
+        package 面子 {
+            enum 順子{
+                which順子(List<牌>):List<順子>
+            }
+            enum 刻子{
+                which刻子(List<牌>):List<刻子>
+            }
+            class 和了{
+                is33332():boolean
+            }
+        }
         package 役の判定 {
             class 1飜の判定 {
                 is門前清自摸和():boolean
