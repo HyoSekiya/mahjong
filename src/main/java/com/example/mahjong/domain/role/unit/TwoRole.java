@@ -1,8 +1,8 @@
 package com.example.mahjong.domain.role.unit;
 
-import com.example.mahjong.domain.role.face.Chow;
-import com.example.mahjong.domain.role.face.Pung;
-import com.example.mahjong.domain.role.face.Win;
+import com.example.mahjong.domain.role.set.Chow;
+import com.example.mahjong.domain.role.set.Pung;
+import com.example.mahjong.domain.role.set.Win;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.example.mahjong.domain.role.face;
+package com.example.mahjong.domain.role.set;
 
 import com.example.mahjong.domain.tile.Tiles;
 import org.springframework.stereotype.Component;
