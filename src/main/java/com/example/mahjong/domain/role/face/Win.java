@@ -36,6 +36,7 @@ public class Win {
         }
 
         // TODO: 頭のサイズはターツクラスを作成して、定義する。
+        // 和了牌から、順子と刻子を抜いた上で、頭があれば、true
         return tilesList.size() == 2;
     }
 
