@@ -7,6 +7,7 @@ import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -15,37 +16,58 @@ public class TwoRole {
 
     private final Win win;
 
-    public boolean is三色同順(List<Tiles> list){
-        List<Chow> chowList = Chow.whichChowsAreIncluded(list);
-        List<Pung> pungList = Pung.whichPungsAreIncluded(list);
-
-        // 順子がなかったら、false
-        if (chowList.isEmpty()){
-            return false;
-        }
+    public boolean is三色同順(List<Tiles> list) {
 
         // 3,3,3,3,2ではに場合、false
-        if (win.isNot33332(list, chowList, pungList)){
+        if (win.isNot33332(list)) {
             return false;
         }
 
-        if (is三色同順(chowList, 三色同順_123())) {
+        // 三色同順ではない時、false
+        if (!(matching(list))) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean matching(List<Tiles> tilesList) {
+        // 配牌の中にどの組み合わせの順子が含まれているかを返す
+        List<Chow> chowList = Chow.whichChowsAreIncluded(tilesList);
+
+        // 順子がなかったら、false
+        if (chowList.isEmpty()) {
+            return false;
+        }
+
+        if (matching(chowList, 三色同順_123())) {
             return true;
-        } else if (is三色同順(chowList, 三色同順_234())) {
+        } else if (matching(chowList, 三色同順_234())) {
             return true;
-        } else if (is三色同順(chowList, 三色同順_345())) {
+        } else if (matching(chowList, 三色同順_345())) {
             return true;
-        } else if (is三色同順(chowList, 三色同順_456())) {
+        } else if (matching(chowList, 三色同順_456())) {
             return true;
-        } else if (is三色同順(chowList, 三色同順_567())) {
+        } else if (matching(chowList, 三色同順_567())) {
             return true;
-        } else if (is三色同順(chowList, 三色同順_678())) {
+        } else if (matching(chowList, 三色同順_678())) {
             return true;
-        } else if (is三色同順(chowList, 三色同順_789())) {
+        } else if (matching(chowList, 三色同順_789())) {
             return true;
         } else {
             return false;
         }
+    }
+
+    private boolean matching(List<Chow> chowList, List<Chow> subjectList) {
+
+        for (Chow subject : subjectList) {
+            if (!(chowList.contains(subject))) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public static List<Chow> 三色同順_123(){
@@ -97,16 +119,5 @@ public class TwoRole {
         );
 
         return chowslist;
-    }
-
-    private boolean is三色同順(List<Chow> chowList, List<Chow> subjectList){
-
-        for(Chow subject : subjectList){
-            if (!(chowList.contains(subject))) {
-                return false;
-            }
-        }
-
-        return true;
     }
 }
