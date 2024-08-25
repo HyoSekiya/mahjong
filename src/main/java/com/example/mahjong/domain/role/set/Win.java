@@ -10,7 +10,13 @@ public class Win {
 
     private final int WIN_TILES_LIST = 14;
 
-    public boolean is33332(List<Tiles> tilesList, List<Chow> chowList, List<Pung> pungList) {
+    public boolean is33332(List<Tiles> tilesList) {
+
+        // 配牌の中にどの組み合わせの順子が含まれているか
+        List<Chow> chowList = Chow.whichChowsAreIncluded(tilesList);
+
+        // 配牌の中にどの組み合わせの刻子が含まれているか
+        List<Pung> pungList = Pung.whichPungsAreIncluded(tilesList);
 
         if (!(tilesList.size() == WIN_TILES_LIST)) {
             return false;
@@ -35,12 +41,11 @@ public class Win {
             tilesList.remove(pung.pung3);
         }
 
-        // TODO: 頭のサイズはターツクラスを作成して、定義する。
         // 和了牌から、順子と刻子を抜いた上で、頭があれば、true
-        return tilesList.size() == 2;
+        return Pair.whichPairAreIncluded(tilesList).size() == 2;
     }
 
-    public boolean isNot33332(List<Tiles> tilesList, List<Chow> chowList, List<Pung> pungList) {
-        return !(is33332(tilesList, chowList, pungList));
+    public boolean isNot33332(List<Tiles> tilesList) {
+        return !(is33332(tilesList));
     }
 }
