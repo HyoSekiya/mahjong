@@ -9,7 +9,7 @@ https://github.com/users/HyoSekiya/projects/2/views/3
 全体的に：https://perceptualmahjong.blog.ss-blog.jp/2010-10-08  
 役：https://chouseisan.com/l/post-9420/
 
-## apicode:string
+## コード値
 ## 三元牌
 ```
 white_dragon
