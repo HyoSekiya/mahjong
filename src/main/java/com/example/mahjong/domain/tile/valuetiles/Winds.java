@@ -1,5 +1,6 @@
 package com.example.mahjong.domain.tile.valuetiles;
 
+import com.example.mahjong.domain.tile.NotTiles;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 
@@ -13,11 +14,23 @@ public enum Winds implements Tiles {
     SOUTH("南","south"),
     WEST("西","west"),
     NORTH("北","north")
+
     ;
 
     public final String label;
 
     public final String apiCode;
+
+//    @Override
+//    public Tiles whichTiles(String value) {
+//        for(Winds winds: Winds.values()) {
+//            if (winds.apiCode.equals(value)) {
+//                return winds;
+//            }
+//        }
+//
+//        return NotTiles.NOT_EXISTS;
+//    }
 
     @Override
     public boolean is風牌() {

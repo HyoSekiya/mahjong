@@ -4,34 +4,33 @@ package api {
         Service
         利用者の牌
         利用者のリクエストを牌に変換するくん
-        和了の各牌と各役を表示(利用者の牌) : void
+        和了の各牌と各役を表示(利用者の牌) : response
     }
-    class 利用者の牌 {
-        1つ目
-        2つ目
-        3つ目
-        4つ目
-        5つ目
-        6つ目
-        7つ目
-        8つ目
-        9つ目
-        10つ目
-        11つ目
-        12つ目
-        13つ目
-        14つ目
-        リクエストを作成(List<String>) : 利用者の牌
+    class Response {
+        response : Map<String,String>
+        和了役をリストで返す : Map<String,String>
     }
-    class 利用者のリクエストを牌に変換するくん {
-        牌に変換くん
-        リクエストコードのチェック(List<String>)) : boolean
-        リクエストを牌に変換(List<利用者の牌>) : List<牌>
+    Api ..> Request
+    Api ..> Response
+
+    class Request {
+        1つ目 : String
+        2つ目 : String
+        3つ目 : String
+        4つ目 : String
+        5つ目 : String
+        6つ目 : String
+        7つ目 : String
+        8つ目 : String
+        9つ目 : String
+        10つ目 : String
+        11つ目 : String
+        12つ目 : String
+        13つ目 : String
+        14つ目 : String
+        リクエストを作成(List<String>) : List<String>
     }
 }
-Api ..> 利用者の牌
-Api ..> 利用者のリクエストを牌に変換するくん
-
 package service{
     class Service{
         並べるくん
@@ -47,11 +46,11 @@ package domain {
             並べたリスト : List<牌>
             牌の種類ごとに並べる(List<牌>) : List<牌>
         }
-        class 牌に変換くん {
-            牌の種類 : String
+        class 利用者のリクエストを牌に変換するくん {
+            リクエストコードのチェック(List<String>)) : boolean
+            リクエストを牌に変換(List<Request>) : List<牌>
             牌に変換(String) : 牌
         }
-        利用者のリクエストを牌に変換するくん .> 牌に変換くん
         package 数牌 {
 
             enum 索子 {
@@ -146,11 +145,11 @@ package domain {
         並べるくん ...> 筒子
         並べるくん ...> 三元牌
         並べるくん ...> 風牌
-        牌に変換くん ...> 索子
-        牌に変換くん ...> 萬子
-        牌に変換くん ...> 筒子
-        牌に変換くん ...> 三元牌
-        牌に変換くん ...> 風牌
+        利用者のリクエストを牌に変換するくん ...> 索子
+        利用者のリクエストを牌に変換するくん ...> 萬子
+        利用者のリクエストを牌に変換するくん ...> 筒子
+        利用者のリクエストを牌に変換するくん ...> 三元牌
+        利用者のリクエストを牌に変換するくん ...> 風牌
     }
 
     package 役 {
@@ -170,18 +169,29 @@ package domain {
             和了役を返す(List<牌>) : List<和了役>
         }
         役の判定くん .> 和了役
-        役の判定くん .> 面子
         package 面子 {
+            class 面子判定くん{
+                is33332():boolean
+                {static} どの順子が含まれているか(List<牌>) : List<順子>
+                {static} どの刻子が含まれているか(List<牌>) : List<刻子>
+                {static} どの対子が含まれているか(List<牌>):List<対子>
+            }
             enum 順子{
-                which順子(List<牌>):List<順子>
+                {static} どの順子が含まれているか(List<牌>):List<順子>
             }
             enum 刻子{
-                which刻子(List<牌>):List<刻子>
+                {static} どの刻子が含まれているか(List<牌>):List<刻子>
             }
-            class 和了{
-                is33332():boolean
+            enum 対子{
+                {static} どの対子が含まれているか(List<牌>):List<対子>
             }
+
+            面子判定くん..>順子
+            面子判定くん..>刻子
+            面子判定くん..>対子
         }
+        役の判定くん .> 面子判定くん
+
         package 役の判定 {
             class 1飜の判定 {
                 is門前清自摸和():boolean
@@ -319,8 +329,9 @@ package domain {
         役の判定くん ..> 役一覧
         役の判定くん ..> 役の判定
     }
-    役の判定 --> 牌
+    役 ..> 牌
 }
+Api ..> 利用者のリクエストを牌に変換するくん
 
 Service ..> 並べるくん
 Service ..> 役の判定くん

@@ -1,5 +1,8 @@
-package com.example.mahjong.domain.role;
+package com.example.mahjong.domain.role.domainservice;
 
+import com.example.mahjong.domain.role.Role;
+import com.example.mahjong.domain.role.WinningRole;
+import com.example.mahjong.domain.role.set.Win;
 import com.example.mahjong.domain.role.unit.OneRole;
 import com.example.mahjong.domain.role.unit.TwoRole;
 import com.example.mahjong.domain.role.unit.Yakuman;
@@ -17,6 +20,8 @@ import java.util.List;
 @Component
 @AllArgsConstructor
 public class  JudgmentOfRole{
+
+    private final Win win;
 
     private final Yakuman yakuman;
 
@@ -67,6 +72,5 @@ public class  JudgmentOfRole{
     private WinningRole addWinningRole(Role role) {
         return WinningRole.toWinningRole(role);
     }
-
 
 }

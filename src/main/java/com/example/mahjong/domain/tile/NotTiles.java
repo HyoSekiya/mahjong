@@ -9,6 +9,11 @@ public enum NotTiles implements Tiles {
 
     public final String label;
 
+//    @Override
+//    public Tiles whichTiles(String value) {
+//        return NotTiles.NOT_EXISTS;
+//    }
+
     @Override
     public boolean is風牌() {
         return false;

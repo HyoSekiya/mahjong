@@ -1,5 +1,6 @@
 package com.example.mahjong.domain.tile.suits;
 
+import com.example.mahjong.domain.tile.NotTiles;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 /**
@@ -23,6 +24,17 @@ public enum Bamboos implements Tiles {
     public final String level;
 
     public final String apiCode;
+
+//    @Override
+//    public Tiles whichTiles(String value) {
+//        for (Bamboos bamboos: Bamboos.values()){
+//            if (bamboos.apiCode.equals(value)) {
+//                return bamboos;
+//            }
+//        }
+//
+//        return NotTiles.NOT_EXISTS;
+//    }
 
     @Override
     public boolean is風牌() {

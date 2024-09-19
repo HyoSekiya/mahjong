@@ -59,6 +59,8 @@ public enum Chow {
     public static List<Chow> whichChowsAreIncluded(List<Tiles> tiles) {
         List<Chow> list = new ArrayList<>();
 
+        System.out.println("Checking for chows in 1: " + tiles);
+
         // 萬子の順子判定
         if (is123_萬子(tiles)) {
             list.add(Chow.萬子123);
@@ -127,6 +129,8 @@ public enum Chow {
         if (is789_索子(tiles)) {
             list.add(Chow.索子789);
         }
+
+        System.out.println("Chow list: " + list);
 
         return list;
     }

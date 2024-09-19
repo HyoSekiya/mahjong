@@ -1,5 +1,6 @@
 package com.example.mahjong.domain.tile.suits;
 
+import com.example.mahjong.domain.tile.NotTiles;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 
@@ -22,6 +23,17 @@ public enum Characters implements Tiles {
 
     public final String level;
     public final String apiCode;
+
+//    @Override
+//    public Tiles whichTiles(String value) {
+//        for(Characters characters: Characters.values()){
+//            if (characters.apiCode.equals(value)) {
+//                return characters;
+//            }
+//        }
+//
+//        return NotTiles.NOT_EXISTS;
+//    }
 
     @Override
     public boolean is風牌() {

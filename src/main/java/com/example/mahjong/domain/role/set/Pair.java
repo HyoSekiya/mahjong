@@ -79,6 +79,4 @@ public enum Pair {
     private static boolean isMatchingPair1(List<Tiles> list, Pair pair) {
         return list.stream().filter(tiles -> tiles.equals(pair)).count() == 2;
     }
-
-
 }

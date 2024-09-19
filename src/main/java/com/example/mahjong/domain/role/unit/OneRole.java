@@ -30,16 +30,8 @@ public class OneRole {
 
     public boolean isタンヤオ(List<Tiles> list){
 
-        if (!this.is33332(list)){
-            return false;
-        }
-
         return list.stream().
                 filter(Tiles::isNot19字牌)
                 .count() == 和了牌の数;
-    }
-
-    public boolean is33332(List<Tiles> list){
-        return true;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.mahjong.domain.tile.valuetiles;
 
+import com.example.mahjong.domain.tile.NotTiles;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +21,19 @@ public enum Dragons implements Tiles {
 
     @Getter
     public final String apiCode;
+
+//    @Override
+//    public Tiles whichTiles(String value) {
+//
+//        // 三元牌
+//        for(Dragons dragons: Dragons.values()){
+//            if (dragons.apiCode.equals(value)){
+//                return dragons;
+//            }
+//        }
+//
+//        return NotTiles.NOT_EXISTS;
+//    }
 
     @Override
     public boolean is風牌() {

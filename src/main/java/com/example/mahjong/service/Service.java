@@ -1,9 +1,8 @@
 package com.example.mahjong.service;
 
-import com.example.mahjong.api.response.Response;
-import com.example.mahjong.domain.role.JudgmentOfRole;
+import com.example.mahjong.domain.role.domainservice.JudgmentOfRole;
 import com.example.mahjong.domain.role.WinningRole;
-import com.example.mahjong.domain.tile.Arrange;
+import com.example.mahjong.domain.tile.domainservice.Arrange;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 
@@ -35,15 +34,6 @@ public class Service {
         }
 
         return list;
-
-    }
-
-    public List<Tiles> 並べる(List<Tiles> tilesList){
-
-        // 利用者の配牌を並べる
-        List<Tiles> arrangeList = arrange.並べる(tilesList);
-
-        return arrangeList;
 
     }
 }

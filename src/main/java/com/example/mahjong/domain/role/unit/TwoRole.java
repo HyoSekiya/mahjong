@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.function.Predicate.not;
+
 @Component
 @AllArgsConstructor
 public class TwoRole {
@@ -18,8 +20,8 @@ public class TwoRole {
 
     public boolean is三色同順(List<Tiles> list) {
 
-        // 3,3,3,3,2ではに場合、false
-        if (win.isNot33332(list)) {
+        // 3,3,3,3,2ではない場合false
+        if (!(win.is33332(list))) {
             return false;
         }
 
