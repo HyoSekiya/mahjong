@@ -3,7 +3,7 @@ package com.example.mahjong.service;
 import com.example.mahjong.domain.role.domainservice.JudgmentOfRole;
 import com.example.mahjong.domain.role.WinningRole;
 import com.example.mahjong.domain.tile.domainservice.Arrange;
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 import org.springframework.web.context.annotation.RequestScope;
 

@@ -1,22 +1,28 @@
-package com.example.mahjong.domain.tile;
+package com.example.mahjong.domain.tile.tiles.valuetiles;
 
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
-public enum NotTiles implements Tiles {
 
-    NOT_EXISTS("知らない値");
+/**
+ * Winds(風牌)
+ */
+@AllArgsConstructor
+public enum Winds implements Tiles {
+    EAST("東","east"),
+    SOUTH("南","south"),
+    WEST("西","west"),
+    NORTH("北","north")
+
+    ;
 
     public final String label;
 
-//    @Override
-//    public Tiles whichTiles(String value) {
-//        return NotTiles.NOT_EXISTS;
-//    }
+    public final String apiCode;
 
     @Override
     public boolean is風牌() {
-        return false;
+        return true;
     }
 
     @Override
@@ -61,6 +67,15 @@ public enum NotTiles implements Tiles {
 
     @Override
     public boolean isNot19字牌() {
-        return false;
+        return true;
+    }
+
+    public int 風牌に順序をつける(){
+        return switch (this) {
+            case EAST -> 1;
+            case SOUTH -> 2;
+            case WEST -> 3;
+            case NORTH -> 4;
+        };
     }
 }

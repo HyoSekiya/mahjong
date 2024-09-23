@@ -1,9 +1,9 @@
-package com.example.mahjong.domain.role.set;
+package com.example.mahjong.domain.set;
 
-import com.example.mahjong.domain.tile.Tiles;
-import com.example.mahjong.domain.tile.suits.Bamboos;
-import com.example.mahjong.domain.tile.suits.Characters;
-import com.example.mahjong.domain.tile.suits.Circles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
+import com.example.mahjong.domain.tile.tiles.suits.Bamboos;
+import com.example.mahjong.domain.tile.tiles.suits.Characters;
+import com.example.mahjong.domain.tile.tiles.suits.Circles;
 import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;

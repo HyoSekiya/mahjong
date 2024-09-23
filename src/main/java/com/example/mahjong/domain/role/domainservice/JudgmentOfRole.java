@@ -2,11 +2,10 @@ package com.example.mahjong.domain.role.domainservice;
 
 import com.example.mahjong.domain.role.Role;
 import com.example.mahjong.domain.role.WinningRole;
-import com.example.mahjong.domain.role.set.Win;
 import com.example.mahjong.domain.role.unit.OneRole;
 import com.example.mahjong.domain.role.unit.TwoRole;
 import com.example.mahjong.domain.role.unit.Yakuman;
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

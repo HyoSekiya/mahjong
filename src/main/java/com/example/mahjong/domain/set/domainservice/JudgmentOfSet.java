@@ -1,6 +1,9 @@
-package com.example.mahjong.domain.role.set;
+package com.example.mahjong.domain.set.domainservice;
 
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.set.Chow;
+import com.example.mahjong.domain.set.Pair;
+import com.example.mahjong.domain.set.Pung;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -10,20 +13,20 @@ import java.util.List;
  * 面子判定くん
  */
 @Component
-public class Win {
+public class JudgmentOfSet {
 
     public boolean is33332(List<Tiles> tilesList) {
 
         List<Tiles>  tiles = new ArrayList<Tiles>(tilesList);
 
         // 配牌の中にどの組み合わせの順子が含まれているか
-        List<Chow> chowList = Chow.whichChowsAreIncluded(tilesList);
+        List<Chow> chowList = whichChowsAreIncluded(tilesList);
 
         // 配牌の中にどの組み合わせの刻子が含まれているか
-        List<Pung> pungList = Pung.whichPungsAreIncluded(tilesList);
+        List<Pung> pungList = whichPungsAreIncluded(tilesList);
 
         // 配牌の中にどの組み合わせの対子が含まれているか
-        List<Pair> pairsList = Pair.whichPairAreIncluded(tilesList);
+        List<Pair> pairsList = whichPairAreIncluded(tilesList);
 
         // 刻子も順子もない場合、false
         if (chowList.isEmpty() && pungList.isEmpty()){
@@ -63,19 +66,15 @@ public class Win {
         return false;
     }
 
-//    public boolean isNot33332(List<Tiles> tilesList) {
-//        return !(is33332(tilesList));
-//    }
+    public List<Chow> whichChowsAreIncluded(List<Tiles> tilesList) {
+        return Chow.whichChowsAreIncluded(tilesList);
+    }
 
-//    public static List<Chow> whichChowsAreIncluded(List<Tiles> tilesList) {
-//        return Chow.whichChowsAreIncluded(tilesList);
-//    }
-//
-//    public static List<Pung> whichPungsAreIncluded(List<Tiles> tilesList) {
-//        return Pung.whichPungsAreIncluded(tilesList);
-//    }
-//
-//    public List<Pair> whichPairAreIncluded(List<Tiles> tilesList) {
-//        return Pair.whichPairAreIncluded(tilesList);
-//    }
+    public List<Pung> whichPungsAreIncluded(List<Tiles> tilesList) {
+        return Pung.whichPungsAreIncluded(tilesList);
+    }
+
+    public List<Pair> whichPairAreIncluded(List<Tiles> tilesList) {
+        return Pair.whichPairAreIncluded(tilesList);
+    }
 }

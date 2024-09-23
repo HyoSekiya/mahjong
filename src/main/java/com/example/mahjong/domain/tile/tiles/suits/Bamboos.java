@@ -1,6 +1,6 @@
-package com.example.mahjong.domain.tile.suits;
+package com.example.mahjong.domain.tile.tiles.suits;
 
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 /**
  *　索子

@@ -6,14 +6,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 和了役と和飜数
+ * 和了役（和了役と和了飜数を保持）
  */
 public class WinningRole {
 
     @Getter
     private final Map<String,String> returnList;
 
-    public WinningRole(Map<String,String> returnList) {
+    public WinningRole(Map<String, String> returnList) {
         this.returnList = returnList;
     }
 

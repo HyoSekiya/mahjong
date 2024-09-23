@@ -4,6 +4,66 @@
     <meta charset="UTF-8">
     <title>Mahjong Calculator</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            color: #28a745;
+        }
+        #tileSelection {
+            margin: 20px 0;
+        }
+        button {
+            font-size: 1.2em;
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #selectedTiles {
+            font-size: 1.5em;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        form {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        select {
+            font-size: 1.2em;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #dc3545;
+        }
+    </style>
     <script>
         let selectedTiles = [];
 
@@ -31,7 +91,6 @@
 
 <h2>牌を選択してください（最大14枚）</h2>
 
-<!-- 牌をリストとして表示する -->
 <div id="tileSelection">
     <button type="button" onclick="selectTile('🀇')">🀇</button>
     <button type="button" onclick="selectTile('🀈')">🀈</button>
@@ -43,20 +102,15 @@
     <button type="button" onclick="selectTile('🀎')">🀎</button>
     <button type="button" onclick="selectTile('🀏')">🀏</button>
     <button type="button" onclick="selectTile('🀐')">&#x1F000;</button>
-    <button type="button" onclick="selectTile('🀏')">🀏</button>
-    <button type="button" onclick="selectTile('🀏')">🀏</button>
-    <button type="button" onclick="selectTile('🀏')">🀏</button>
     <!-- 他の牌もここに追加 -->
 </div>
 
 <h3>選択された牌:</h3>
 <p id="selectedTiles"></p>
 
-<!-- リセットボタン -->
 <button type="button" onclick="resetTiles()">リセット</button>
 
 <form action="#" th:action="@{/mahjong/calculate}" method="post" onsubmit="submitTiles()">
-    <!-- 選択された牌を送信するための隠し入力フィールド -->
     <input type="hidden" id="tilesInput" name="tiles">
 
     <div>
@@ -72,6 +126,6 @@
 </form>
 
 <h2>結果</h2>
-<p th:text="${result}"></p>
+<p class="result" th:text="${result}"></p>
 </body>
 </html>

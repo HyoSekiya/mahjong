@@ -1,7 +1,6 @@
-package com.example.mahjong.domain.tile.valuetiles;
+package com.example.mahjong.domain.tile.tiles.valuetiles;
 
-import com.example.mahjong.domain.tile.NotTiles;
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

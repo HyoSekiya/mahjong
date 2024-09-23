@@ -1,10 +1,10 @@
-package com.example.mahjong.domain.tile;
+package com.example.mahjong.domain.tile.tiles;
 
-import com.example.mahjong.domain.tile.suits.Bamboos;
-import com.example.mahjong.domain.tile.suits.Characters;
-import com.example.mahjong.domain.tile.suits.Circles;
-import com.example.mahjong.domain.tile.valuetiles.Dragons;
-import com.example.mahjong.domain.tile.valuetiles.Winds;
+import com.example.mahjong.domain.tile.tiles.suits.Bamboos;
+import com.example.mahjong.domain.tile.tiles.suits.Characters;
+import com.example.mahjong.domain.tile.tiles.suits.Circles;
+import com.example.mahjong.domain.tile.tiles.valuetiles.Dragons;
+import com.example.mahjong.domain.tile.tiles.valuetiles.Winds;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;

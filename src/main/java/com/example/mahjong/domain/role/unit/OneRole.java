@@ -1,6 +1,6 @@
 package com.example.mahjong.domain.role.unit;
 
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

@@ -1,6 +1,9 @@
 package com.example.mahjong.api.request;
 
 
+import com.example.mahjong.domain.sign.signs.Win;
+import com.example.mahjong.domain.tile.tiles.NotTiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -26,11 +29,33 @@ public class PlayerRequest {
     private String twelve;
     private String thirteen;
     private String fourteen;
+    // 和了方
+    private String howToWin;
+
+    public List<Tiles> 利用者の牌を牌に変換() {
+
+        List <String> playerRequest = create();
+
+        List<Tiles> tilesList = new ArrayList<>();
+
+        /**
+         * 牌に変換
+         */
+        for (String playerTile: playerRequest) {
+            tilesList.add(this.牌に変換(playerTile));
+        }
+
+        if (tilesList.contains(NotTiles.NOT_EXISTS)) {
+            throw new RuntimeException("不正の値が入ってる〜");
+        }
+
+        return tilesList;
+    }
 
     /**
-     * 利用者の牌を作成
+     * リクエストフォーム
      */
-    public List<String> create(){
+    private List<String> create(){
         List<String> list = new ArrayList<>();
 
         list.add(one);
@@ -49,5 +74,16 @@ public class PlayerRequest {
         list.add(fourteen);
 
         return list;
+    }
+
+
+    public Tiles 牌に変換(String value) {
+
+        return Tiles.whichTiles(value);
+
+    }
+
+    public Win 和了方を定義 () {
+        return Win.whichWin(howToWin);
     }
 }

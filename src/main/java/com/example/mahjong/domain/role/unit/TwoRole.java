@@ -1,22 +1,18 @@
 package com.example.mahjong.domain.role.unit;
 
-import com.example.mahjong.domain.role.set.Chow;
-import com.example.mahjong.domain.role.set.Pung;
-import com.example.mahjong.domain.role.set.Win;
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.set.Chow;
+import com.example.mahjong.domain.set.domainservice.JudgmentOfSet;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import static java.util.function.Predicate.not;
 
 @Component
 @AllArgsConstructor
 public class TwoRole {
 
-    private final Win win;
+    private final JudgmentOfSet win;
 
     public boolean is三色同順(List<Tiles> list) {
 

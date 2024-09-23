@@ -1,11 +1,10 @@
 package com.example.mahjong.domain.tile.domainservice;
 
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
-import java.util.Comparator;
 import java.util.List;
 
 /**

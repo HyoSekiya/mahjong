@@ -1,7 +1,7 @@
 package com.example.mahjong.api.request;
 
-import com.example.mahjong.domain.tile.NotTiles;
-import com.example.mahjong.domain.tile.Tiles;
+import com.example.mahjong.domain.tile.tiles.NotTiles;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import com.example.mahjong.domain.tile.domainservice.TilesRole;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

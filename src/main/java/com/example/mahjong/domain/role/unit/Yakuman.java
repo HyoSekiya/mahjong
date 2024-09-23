@@ -1,8 +1,6 @@
 package com.example.mahjong.domain.role.unit;
 
-import com.example.mahjong.domain.tile.Tiles;
-import com.example.mahjong.domain.tile.suits.Bamboos;
-import com.example.mahjong.domain.tile.valuetiles.Dragons;
+import com.example.mahjong.domain.tile.tiles.Tiles;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
