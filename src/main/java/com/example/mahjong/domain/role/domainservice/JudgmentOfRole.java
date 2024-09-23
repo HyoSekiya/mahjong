@@ -21,8 +21,6 @@ import java.util.List;
 @AllArgsConstructor
 public class  JudgmentOfRole{
 
-    private final Win win;
-
     private final Yakuman yakuman;
 
     private final OneRole oneRole;
@@ -34,7 +32,7 @@ public class  JudgmentOfRole{
      *  ex)Map<大三元、13飜>
      *
      * @param arrangeList
-     * @return
+     * @return 和了内容List
      */
 
     public List<WinningRole> 和了役と和飜数を判定(List<Tiles> arrangeList) {
@@ -73,4 +71,8 @@ public class  JudgmentOfRole{
         return WinningRole.toWinningRole(role);
     }
 
+    public List<WinningRole> 和了内容を返す(List<Tiles> arrangeList) {
+        // TODO: 和了点数計算くんを呼び出して、和了内容を返す
+        return null;
+    }
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mahjong Calculator</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script>
+        let selectedTiles = [];
+
+        function selectTile(tile) {
+            if (selectedTiles.length < 14) {
+                selectedTiles.push(tile);
+                document.getElementById('selectedTiles').innerText = selectedTiles.join(' ');
+            } else {
+                alert("最大で14枚の牌しか選べません。");
+            }
+        }
+
+        function resetTiles() {
+            selectedTiles = [];
+            document.getElementById('selectedTiles').innerText = '';
+        }
+
+        function submitTiles() {
+            document.getElementById('tilesInput').value = selectedTiles.join(',');
+        }
+    </script>
+</head>
+<body>
+<h1>麻雀点数計算機</h1>
+
+<h2>牌を選択してください（最大14枚）</h2>
+
+<!-- 牌をリストとして表示する -->
+<div id="tileSelection">
+    <button type="button" onclick="selectTile('🀇')">🀇</button>
+    <button type="button" onclick="selectTile('🀈')">🀈</button>
+    <button type="button" onclick="selectTile('🀉')">🀉</button>
+    <button type="button" onclick="selectTile('🀊')">🀊</button>
+    <button type="button" onclick="selectTile('🀋')">🀋</button>
+    <button type="button" onclick="selectTile('🀌')">🀌</button>
+    <button type="button" onclick="selectTile('🀍')">🀍</button>
+    <button type="button" onclick="selectTile('🀎')">🀎</button>
+    <button type="button" onclick="selectTile('🀏')">🀏</button>
+    <button type="button" onclick="selectTile('🀐')">&#x1F000;</button>
+    <button type="button" onclick="selectTile('🀏')">🀏</button>
+    <button type="button" onclick="selectTile('🀏')">🀏</button>
+    <button type="button" onclick="selectTile('🀏')">🀏</button>
+    <!-- 他の牌もここに追加 -->
+</div>
+
+<h3>選択された牌:</h3>
+<p id="selectedTiles"></p>
+
+<!-- リセットボタン -->
+<button type="button" onclick="resetTiles()">リセット</button>
+
+<form action="#" th:action="@{/mahjong/calculate}" method="post" onsubmit="submitTiles()">
+    <!-- 選択された牌を送信するための隠し入力フィールド -->
+    <input type="hidden" id="tilesInput" name="tiles">
+
+    <div>
+        <label for="winningType">勝ち方:</label>
+        <select id="winningType" name="winningType">
+            <option value="tsumo">ツモ</option>
+            <option value="ron">ロン</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">計算する</button>
+    </div>
+</form>
+
+<h2>結果</h2>
+<p th:text="${result}"></p>
+</body>
+</html>

@@ -21,17 +21,6 @@ public enum Winds implements Tiles {
 
     public final String apiCode;
 
-//    @Override
-//    public Tiles whichTiles(String value) {
-//        for(Winds winds: Winds.values()) {
-//            if (winds.apiCode.equals(value)) {
-//                return winds;
-//            }
-//        }
-//
-//        return NotTiles.NOT_EXISTS;
-//    }
-
     @Override
     public boolean is風牌() {
         return true;

@@ -14,18 +14,16 @@ public class Win {
 
     public boolean is33332(List<Tiles> tilesList) {
 
-        List<Tiles> tiles = new ArrayList<Tiles>(tilesList);
-
-
+        List<Tiles>  tiles = new ArrayList<Tiles>(tilesList);
 
         // 配牌の中にどの組み合わせの順子が含まれているか
-        List<Chow> chowList = Chow.whichChowsAreIncluded(tiles);
+        List<Chow> chowList = Chow.whichChowsAreIncluded(tilesList);
 
         // 配牌の中にどの組み合わせの刻子が含まれているか
-        List<Pung> pungList = Pung.whichPungsAreIncluded(tiles);
+        List<Pung> pungList = Pung.whichPungsAreIncluded(tilesList);
 
         // 配牌の中にどの組み合わせの対子が含まれているか
-        List<Pair> pairsList = Pair.whichPairAreIncluded(tiles);
+        List<Pair> pairsList = Pair.whichPairAreIncluded(tilesList);
 
         // 刻子も順子もない場合、false
         if (chowList.isEmpty() && pungList.isEmpty()){
@@ -51,11 +49,18 @@ public class Win {
 //        // 和了牌から、順子と刻子を抜いた上で、頭(対子)があれば、true
 //        return whichPairAreIncluded(tilesList).size() == 2;
 
-        System.out.println("chowList" + chowList);
-        System.out.println("pungList" + pungList);
-        System.out.println("tilesList" + tiles);
+        System.out.println("chowList:" + chowList);
+        System.out.println("pungList:" + pungList);
+        System.out.println("tilesList:" + tiles);
+        System.out.println("pairsList:" + pairsList);
 
-        return tiles.size() == 2;
+        if (tiles.size() == 2) {
+            tiles.clear();
+            return true;
+        }
+
+        tiles.clear();
+        return false;
     }
 
 //    public boolean isNot33332(List<Tiles> tilesList) {
@@ -70,7 +75,7 @@ public class Win {
 //        return Pung.whichPungsAreIncluded(tilesList);
 //    }
 //
-//    public static List<Pair> whichPairAreIncluded(List<Tiles> tilesList) {
+//    public List<Pair> whichPairAreIncluded(List<Tiles> tilesList) {
 //        return Pair.whichPairAreIncluded(tilesList);
 //    }
 }

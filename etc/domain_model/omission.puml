@@ -80,7 +80,7 @@ package domain {
     }
 
     package 牌 {
-        interface 牌interface
+        interface 牌
         class 並べるくん {
             並べたリスト : List<牌>
             牌の種類ごとに並べる(List<牌>) : List<牌>
@@ -93,15 +93,6 @@ package domain {
         package 数牌 {
 
             enum 索子 {
-                1索子
-                2索子
-                3索子
-                4索子
-                5索子
-                6索子
-                7索子
-                8索子
-                9索子
                 牌の種類() : String
                 牌の名前() : String
                 牌のリクエストコード() : String
@@ -111,15 +102,6 @@ package domain {
             }
 
             enum 萬子 {
-                1萬子
-                2萬子
-                3萬子
-                4萬子
-                5萬子
-                6萬子
-                7萬子
-                8萬子
-                9萬子
                 牌の種類() : String
                 牌の名前() : String
                 牌のリクエストコード() : String
@@ -130,15 +112,6 @@ package domain {
             }
 
             enum 筒子 {
-                1筒子
-                2筒子
-                3筒子
-                4筒子
-                5筒子
-                6筒子
-                7筒子
-                8筒子
-                9筒子
                 牌の種類() : String
                 牌の名前() : String
                 牌のリクエストコード() : String
@@ -174,13 +147,21 @@ package domain {
                 {static} + 風牌のうちどれか(String) : 風牌
             }
         }
-        索子 --|> 牌interface
-        萬子 --|> 牌interface
-        筒子 --|> 牌interface
-        三元牌 --|> 牌interface
-        風牌 --|> 牌interface
-        並べるくん ..> 牌interface
-        利用者のリクエストを牌に変換するくん ..> 牌interface
+        索子 --|> 牌
+        萬子 --|> 牌
+        筒子 --|> 牌
+        三元牌 --|> 牌
+        風牌 --|> 牌
+        並べるくん ..> 索子
+        並べるくん ..> 萬子
+        並べるくん ..> 筒子
+        並べるくん ..> 三元牌
+        並べるくん ..> 風牌
+        利用者のリクエストを牌に変換するくん ...> 索子
+        利用者のリクエストを牌に変換するくん ...> 萬子
+        利用者のリクエストを牌に変換するくん ...> 筒子
+        利用者のリクエストを牌に変換するくん ...> 三元牌
+        利用者のリクエストを牌に変換するくん ...> 風牌
     }
 
     package 役 {
@@ -204,133 +185,45 @@ package domain {
 
         package 役の判定 {
             class 1飜の判定 {
-                is門前清自摸和():boolean
-                is立直(List<牌>):boolean
-                is一発(List<牌>):boolean
-                is役牌(List<牌>):boolean
-                is平和(List<牌>):boolean
-                is断么九(List<牌>):boolean
-                is一盃口(List<牌>):boolean
-                is海底摸月(List<牌>):boolean
-                is河底撈魚(List<牌>):boolean
-                is搶槓(List<牌>):boolean
-                is嶺上開花(List<牌>):boolean
-                is三色同順_鳴き(List<牌>):boolean
-                is一気通貫_鳴き(List<牌>):boolean
-                is全帯么九_鳴き(List<牌>):boolean
             }
             class 2飜の判定{
-                isダブル立直(List<牌>):boolean
-                is連風牌(List<牌>):boolean
-                is対々和(List<牌>):boolean
-                is三暗刻(List<牌>):boolean
-                is三色同刻(List<牌>):boolean
-                is三色同順(List<牌>):boolean
-                is三槓子(List<牌>):boolean
-                is小三元(List<牌>):boolean
-                is混老頭(List<牌>):boolean
-                is一気通貫(List<牌>):boolean
-                is全帯么九(List<牌>):boolean
-                is七対子(List<牌>):boolean
-                is純全帯么九_鳴き(List<牌>):boolean
             }
             class 3飜の判定{
-                is二盃口(List<牌>):boolean
-                is混一色(List<牌>):boolean
-                is純全帯么九(List<牌>):boolean
             }
             class 5飜の判定{
-                is清一色_鳴き(List<牌>):boolean
             }
             class 6飜の判定{
-                is清一色(List<牌>):boolean
             }
             class 役満の判定{
-                is天和(List<牌>):boolean
-                is地和(List<牌>):boolean
-                is国士無双(List<牌>):boolean
-                is四暗刻(List<牌>):boolean
-                is大三元(List<牌>):boolean
-                is緑一色(List<牌>):boolean
-                is字一色(List<牌>):boolean
-                is小四喜(List<牌>):boolean
-                is大四喜(List<牌>):boolean
-                is清老頭(List<牌>):boolean
-                is四槓子(List<牌>):boolean
-                is九蓮宝燈(List<牌>):boolean
             }
         }
         package 役一覧{
             enum 1飜 {
-                門前清自摸和
-                立直
-                一発
-                役牌
-                平和
-                断么九
-                一盃口
-                海底摸月
-                河底撈魚
-                搶槓
-                嶺上開花
-                三色同順_鳴き
-                一気通貫_鳴き
-                全帯么九_鳴き
                 役名() : String
                 飜数() : int
                 飜数() : String
             }
             enum 2飜 {
-                ダブル立直
-                連風牌
-                対々和
-                三暗刻
-                三色同刻
-                三色同順
-                三槓子
-                小三元
-                混老頭
-                一気通貫
-                全帯么九
-                七対子
-                純全帯么九_鳴き
                 役名() : String
                 飜数() : int
                 飜数() : String
             }
             enum 3飜 {
-                二盃口
-                混一色
-                純全帯么九
                 役名() : String
                 飜数() : int
                 飜数() : String
             }
             enum 5飜 {
-                清一色_鳴き
                 役名() : String
                 飜数() : int
                 飜数() : String
             }
             enum 6飜 {
-                清一色
                 役名() : String
                 飜数() : int
                 飜数() : String
             }
             enum 役満 {
-                天和
-                地和
-                国士無双
-                四暗刻
-                大三元
-                緑一色
-                字一色
-                小四喜
-                大四喜
-                清老頭
-                四槓子
-                九蓮宝燈
                 役名() : String
                 飜数() : int
                 飜数() : String
@@ -357,17 +250,15 @@ package domain {
         面子判定くん..>刻子
         面子判定くん..>対子
     }
-    和了点数計算くん .> 合計符計算くん
-    和了点数計算くん .> 和了役判定くん
-    和了点数計算くん .> 牌interface
+    和了点数 .>符
+    和了点数 .> 役
+    和了点数 .> 牌
     面子 ..> 牌
     符 ...> 面子
     符 ...> 牌
     役 ..> 牌
     役 ..> 面子
 }
-Api ..> 利用者のリクエストを牌に変換するくん
 Service ..> 和了点数計算くん
-Service ..> 並べるくん
 
 @enduml

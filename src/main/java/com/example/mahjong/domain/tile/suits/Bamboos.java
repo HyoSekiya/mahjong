@@ -1,6 +1,5 @@
 package com.example.mahjong.domain.tile.suits;
 
-import com.example.mahjong.domain.tile.NotTiles;
 import com.example.mahjong.domain.tile.Tiles;
 import lombok.AllArgsConstructor;
 /**

@@ -1,15 +1,9 @@
 package com.example.mahjong.domain.role.unit;
 
 import com.example.mahjong.domain.tile.Tiles;
-import com.example.mahjong.domain.tile.suits.Bamboos;
-import com.example.mahjong.domain.tile.suits.Characters;
-import com.example.mahjong.domain.tile.suits.Circles;
-import com.example.mahjong.domain.tile.valuetiles.Dragons;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class OneRole {

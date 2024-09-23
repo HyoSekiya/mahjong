@@ -1,13 +1,9 @@
 package com.example.mahjong.domain.tile.domainservice;
 
 import com.example.mahjong.domain.tile.Tiles;
-import com.example.mahjong.domain.tile.suits.Bamboos;
-import com.example.mahjong.domain.tile.suits.Characters;
-import com.example.mahjong.domain.tile.suits.Circles;
-import com.example.mahjong.domain.tile.valuetiles.Dragons;
-import com.example.mahjong.domain.tile.valuetiles.Winds;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.Comparator;
 import java.util.List;
@@ -17,6 +13,7 @@ import java.util.List;
  */
 @Component
 @AllArgsConstructor
+@RequestScope
 public class Arrange {
 
     private final List<Tiles> arrangeList;
