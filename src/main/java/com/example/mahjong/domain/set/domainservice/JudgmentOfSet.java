@@ -5,14 +5,17 @@ import com.example.mahjong.domain.set.Pair;
 import com.example.mahjong.domain.set.Pung;
 import com.example.mahjong.domain.tile.tiles.Tiles;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 面子判定くん
  */
 @Component
+@RequestScope
 public class JudgmentOfSet {
 
     public boolean is33332(List<Tiles> tilesList) {
@@ -26,7 +29,7 @@ public class JudgmentOfSet {
         List<Pung> pungList = whichPungsAreIncluded(tilesList);
 
         // 配牌の中にどの組み合わせの対子が含まれているか
-        List<Pair> pairsList = whichPairAreIncluded(tilesList);
+        Optional<Pair> pair = whichPairAreIncluded(tilesList);
 
         // 刻子も順子もない場合、false
         if (chowList.isEmpty() && pungList.isEmpty()){
@@ -55,7 +58,7 @@ public class JudgmentOfSet {
         System.out.println("chowList:" + chowList);
         System.out.println("pungList:" + pungList);
         System.out.println("tilesList:" + tiles);
-        System.out.println("pairsList:" + pairsList);
+        System.out.println("pairsList:" + pair);
 
         if (tiles.size() == 2) {
             tiles.clear();
@@ -74,7 +77,7 @@ public class JudgmentOfSet {
         return Pung.whichPungsAreIncluded(tilesList);
     }
 
-    public List<Pair> whichPairAreIncluded(List<Tiles> tilesList) {
+    public Optional<Pair> whichPairAreIncluded(List<Tiles> tilesList) {
         return Pair.whichPairAreIncluded(tilesList);
     }
 }

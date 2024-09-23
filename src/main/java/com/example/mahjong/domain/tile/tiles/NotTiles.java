@@ -14,6 +14,11 @@ public enum NotTiles implements Tiles {
     public final String label;
 
     @Override
+    public boolean is役牌() {
+        return false;
+    }
+
+    @Override
     public boolean is風牌() {
         return false;
     }

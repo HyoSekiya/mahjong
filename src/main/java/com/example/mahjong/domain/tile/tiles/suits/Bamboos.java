@@ -36,6 +36,11 @@ public enum Bamboos implements Tiles {
 //    }
 
     @Override
+    public boolean is役牌() {
+        return false;
+    }
+
+    @Override
     public boolean is風牌() {
         return false;
     }

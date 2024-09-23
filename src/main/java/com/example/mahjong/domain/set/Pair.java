@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 対子(トイツ)
@@ -64,19 +65,24 @@ public enum Pair {
 
     public Tiles pair2;
 
-    public static List<Pair> whichPairAreIncluded(List<Tiles> list) {
-        List<Pair> pairList = new ArrayList<>();
+    public static Optional<Pair> whichPairAreIncluded(List<Tiles> list) {
 
-        for(Pair pair : Pair.values()) {
-            if (isMatchingPair1(list, pair)) {
-                pairList.add(pair);
-            }
+        // 雀頭を決める際、引数の牌は2つであることが絶対
+        if (!(list.size() == 2)) {
+            return Optional.empty();
         }
 
-        return pairList;
+        for(Pair pair : Pair.values()) {
+            for (Tiles tiles : list) {
+                if (tiles.equals(pair.pair1) && tiles.equals(pair.pair2)) {
+                    return Optional.of(pair);
+                }
+            }
+        }
+        return Optional.empty();
     }
 
-    private static boolean isMatchingPair1(List<Tiles> list, Pair pair) {
-        return list.stream().filter(tiles -> tiles.equals(pair)).count() == 2;
+    public boolean is役牌() {
+        return this.pair1.is役牌() && this.pair1.is役牌();
     }
 }

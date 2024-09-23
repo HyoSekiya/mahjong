@@ -1,5 +1,411 @@
 POST http://localhost:8080/mahjong/sum2
 Content-Type: application/json
+Content-Length: 385
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "six_bamboo",
+  "fourteen": "six_bamboo",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T231944.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 375
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "north",
+  "fourteen": "north",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T231929.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 375
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "north",
+  "fourteen": "north",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T230633.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 375
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "north",
+  "fourteen": "north",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T230232.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 375
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "north",
+  "fourteen": "north",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T230143.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 375
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "north",
+  "fourteen": "north",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T230004.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T225927.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T222933.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T222759.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T222007.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T221943.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T221852.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T221835.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
+Content-Length: 395
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "one": "one_bamboo",
+  "two": "one_bamboo",
+  "three": "one_bamboo",
+  "four": "red_dragon",
+  "five": "red_dragon",
+  "six": "red_dragon",
+  "seven": "green_dragon",
+  "eight": "green_dragon",
+  "nine": "green_dragon",
+  "ten": "white_dragon",
+  "eleven": "white_dragon",
+  "twelve": "white_dragon",
+  "thirteen": "eight_character",
+  "fourteen": "eight_character",
+  "howToWin": "others"
+}
+
+<> 2024-09-23T221647.200.json
+
+###
+
+POST http://localhost:8080/mahjong/sum2
+Content-Type: application/json
 Content-Length: 395
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
@@ -1038,399 +1444,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2024-09-23T200218.500.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 401
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character",
-  "howToWin": "aaa"
-}
-
-<> 2024-09-23T200157.500.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T191704.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T191537.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T190010.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T185948.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T185509.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T184947.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T184946.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T184942.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T184755.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T184727.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum2
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T184530.500.json
-
-###
-
-POST http://localhost:8080/mahjong/sum
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T175419-1.200.json
-
-###
-
-POST http://localhost:8080/mahjong/sum
-Content-Type: application/json
-Content-Length: 380
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "one": "one_bamboo",
-  "two": "two_bamboo",
-  "three": "three_bamboo",
-  "four": "one_character",
-  "five": "two_character",
-  "six": "three_character",
-  "seven": "one_circle",
-  "eight": "two_circle",
-  "nine": "three_circle",
-  "ten": "white_dragon",
-  "eleven": "white_dragon",
-  "twelve": "white_dragon",
-  "thirteen": "eight_character",
-  "fourteen": "eight_character"
-}
-
-<> 2024-09-23T175419.200.json
 
 ###
 

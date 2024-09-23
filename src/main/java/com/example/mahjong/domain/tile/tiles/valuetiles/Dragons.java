@@ -35,6 +35,11 @@ public enum Dragons implements Tiles {
 //    }
 
     @Override
+    public boolean is役牌() {
+        return true;
+    }
+
+    @Override
     public boolean is風牌() {
         return false;
     }

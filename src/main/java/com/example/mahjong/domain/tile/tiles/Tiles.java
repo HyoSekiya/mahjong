@@ -17,6 +17,8 @@ import java.util.List;
 @Component
 public interface Tiles {
 
+    boolean is役牌();
+
     boolean is風牌();
 
     boolean is三元牌();

@@ -47,7 +47,7 @@ public class JudgmentOfSign {
 
         // 待の形
 
-        int sum = 基本符.getScore() + 和了方.getScore() + 面子得点合計;
+        int sum = 基本符.getScore() + 和了方.getScore() + 面子得点合計 + 雀頭.getScore();
 
         return new SumSign(sum);
 
