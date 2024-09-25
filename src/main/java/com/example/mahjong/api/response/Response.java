@@ -1,5 +1,6 @@
 package com.example.mahjong.api.response;
 
+import com.example.mahjong.domain.calculation.WinEntity;
 import com.example.mahjong.domain.role.WinningRole;
 import org.springframework.stereotype.Repository;
 

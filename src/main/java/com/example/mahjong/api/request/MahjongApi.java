@@ -1,7 +1,7 @@
 package com.example.mahjong.api.request;
 
 import com.example.mahjong.api.response.Response;
-import com.example.mahjong.domain.sign.domainservice.JudgmentOfSign;
+import com.example.mahjong.domain.calculation.WinEntity;
 import com.example.mahjong.domain.sign.SumSign;
 import com.example.mahjong.domain.role.WinningRole;
 import com.example.mahjong.service.Service;
@@ -24,8 +24,6 @@ public class MahjongApi {
      */
     private final Service service;
 
-    private final JudgmentOfSign judgmentOfSign;
-
     @PostMapping("/sum")
     public List<Map<String, String>> mahjong(@RequestBody PlayerRequest request){
 
@@ -41,11 +39,12 @@ public class MahjongApi {
     public int mahjong2(@RequestBody PlayerRequest request){
 
         // 利用者の和了と飜数を返却
-        SumSign sign = judgmentOfSign.sumSign(
+        WinEntity winEntity = service.点数計算(
                 request.利用者の牌を牌に変換(),
                 request.和了方を定義()
         );
 
-        return sign.getValue();
+        // TODO: ResoponseクラスでWinEnityから整形して、出力
+        return winEntity.getWinScore().getValue();
     }
 }

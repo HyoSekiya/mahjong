@@ -63,15 +63,14 @@ public class  JudgmentOfRole{
             roleList.add(addWinningRole(Role.THREE_CONCEALED_TRIPLES));
         }
 
+        if (roleList.isEmpty()){
+            throw new RuntimeException("役無し！！！チョンボ！！！");
+        }
+
         return roleList;
     }
 
     private WinningRole addWinningRole(Role role) {
         return WinningRole.toWinningRole(role);
-    }
-
-    public List<WinningRole> 和了内容を返す(List<Tiles> arrangeList) {
-        // TODO: 和了点数計算くんを呼び出して、和了内容を返す
-        return null;
     }
 }
