@@ -30,36 +30,36 @@ public class  JudgmentOfRole{
      * 役の判定をして、Map<String,String>で返す
      *  ex)Map<大三元、13飜>
      *
-     * @param arrangeList
+     * @param tilesList
      * @return 和了内容List
      */
 
-    public List<WinningRole> 和了役と和飜数を判定(List<Tiles> arrangeList) {
+    public List<WinningRole> 和了役と和飜数を判定(List<Tiles> tilesList) {
         List<WinningRole> roleList = new ArrayList<>();
 
-        if (yakuman.is大三元(arrangeList)){
+        if (yakuman.is大三元(tilesList)){
             roleList.add(addWinningRole(Role.BIG_DRAGONS));
             // 役満なので、早期リターン
             return roleList;
         }
 
-        if (oneRole.is白(arrangeList)){
+        if (oneRole.is白(tilesList)){
             roleList.add(addWinningRole(Role.VAVUE_TIES_WHITE));
         }
 
-        if (oneRole.is發(arrangeList)){
+        if (oneRole.is發(tilesList)){
             roleList.add(addWinningRole(Role.VAVUE_TIES_GREEN));
         }
 
-        if (oneRole.is中(arrangeList)){
+        if (oneRole.is中(tilesList)){
             roleList.add(addWinningRole(Role.VAVUE_TIES_RED));
         }
 
-        if (oneRole.isタンヤオ(arrangeList)){
+        if (oneRole.isタンヤオ(tilesList)){
             roleList.add(addWinningRole(Role.All_SIMPLES));
         }
 
-        if (twoRole.is三色同順(arrangeList)){
+        if (twoRole.is三色同順(tilesList)){
             roleList.add(addWinningRole(Role.THREE_CONCEALED_TRIPLES));
         }
 

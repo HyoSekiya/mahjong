@@ -26,10 +26,11 @@ public class Service {
 
     public List<WinningRole> 和了役と飜数を返す(List<Tiles> tilesList){
 
+         // 並べたRequestの役を判定して返す
+        List<WinningRole> list = judgmentOfRole.和了役と和飜数を判定(tilesList);
+
         // 利用者の配牌を並べる
         List<Tiles> arrangeList = arrange.並べる(tilesList);
-         // 並べたRequestの役を判定して返す
-        List<WinningRole> list = judgmentOfRole.和了役と和飜数を判定(arrangeList);
 
         if (list.isEmpty()){
             throw new RuntimeException("役無し！！！チョンボ！！！");

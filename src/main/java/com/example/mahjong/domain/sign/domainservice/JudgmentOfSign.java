@@ -1,6 +1,5 @@
 package com.example.mahjong.domain.sign.domainservice;
 
-import com.example.mahjong.domain.set.domainservice.JudgmentOfSet;
 import com.example.mahjong.domain.sign.SumSign;
 import com.example.mahjong.domain.sign.signs.Sign;
 import com.example.mahjong.domain.sign.signs.Win;
