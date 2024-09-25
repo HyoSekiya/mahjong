@@ -37,6 +37,8 @@ public interface Tiles {
 
     boolean is19字牌();
 
+    boolean is1or9();
+
     boolean isNot19字牌();
 
     static Tiles whichTiles(String value) {

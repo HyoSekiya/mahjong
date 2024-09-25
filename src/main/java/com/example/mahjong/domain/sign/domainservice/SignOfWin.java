@@ -5,6 +5,9 @@ import com.example.mahjong.domain.sign.signs.Win;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
+/**
+ * 和了の判定くん
+ */
 @Component
 @AllArgsConstructor
 public class SignOfWin {

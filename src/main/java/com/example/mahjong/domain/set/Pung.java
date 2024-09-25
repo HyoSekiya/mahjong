@@ -15,7 +15,7 @@ import java.util.List;
  * 刻子（コーツ）
  */
 @AllArgsConstructor
-public enum Pung {
+public enum Pung  implements Set{
 
     萬子111(Characters.ONE_CHARACTERS, Characters.ONE_CHARACTERS, Characters.ONE_CHARACTERS),
     萬子222(Characters.TWO_CHARACTERS, Characters.TWO_CHARACTERS, Characters.TWO_CHARACTERS),
@@ -364,7 +364,13 @@ public enum Pung {
     }
 
 
+    @Override
+    public boolean isSet() {
+        return true;
+    }
 
-
-
+    @Override
+    public boolean isChow() {
+        return false;
+    }
 }

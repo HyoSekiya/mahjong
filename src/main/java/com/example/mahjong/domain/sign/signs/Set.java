@@ -2,6 +2,9 @@ package com.example.mahjong.domain.sign.signs;
 
 import lombok.AllArgsConstructor;
 
+/**
+ * 面子（符一覧）
+ */
 @AllArgsConstructor
 public enum Set implements Sign{
 

@@ -83,9 +83,18 @@ public enum Bamboos implements Tiles {
     @Override
     public boolean is19字牌() {
         return switch (this) {
-            case ONE_BAMBOOS -> false;
-            case NINE_BAMBOOS -> false;
-            default -> true;
+            case ONE_BAMBOOS -> true;
+            case NINE_BAMBOOS -> true;
+            default -> false;
+        };
+    }
+
+    @Override
+    public boolean is1or9() {
+        return switch (this) {
+            case ONE_BAMBOOS -> true;
+            case NINE_BAMBOOS -> true;
+            default -> false;
         };
     }
 

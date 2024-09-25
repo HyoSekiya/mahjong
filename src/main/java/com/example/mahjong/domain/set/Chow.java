@@ -13,7 +13,7 @@ import java.util.List;
  * 順子（シュンツ）
  */
 @AllArgsConstructor
-public enum Chow {
+public enum Chow implements Set{
 
     /*
     萬子（1, 2, 3）、筒子（1, 2, 3）、索子（1, 2, 3）
@@ -233,6 +233,13 @@ public enum Chow {
     }
 
 
+    @Override
+    public boolean isSet() {
+        return true;
+    }
 
-
+    @Override
+    public boolean isChow() {
+        return true;
+    }
 }

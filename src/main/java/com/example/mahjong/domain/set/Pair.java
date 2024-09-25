@@ -8,7 +8,6 @@ import com.example.mahjong.domain.tile.tiles.valuetiles.Dragons;
 import com.example.mahjong.domain.tile.tiles.valuetiles.Winds;
 import lombok.AllArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +15,7 @@ import java.util.Optional;
  * 対子(トイツ)
  */
 @AllArgsConstructor
-public enum Pair {
+public enum Pair  implements Set{
     // 萬子 (Characters)
     一萬(Characters.ONE_CHARACTERS, Characters.ONE_CHARACTERS),
     二萬(Characters.TWO_CHARACTERS, Characters.TWO_CHARACTERS),
@@ -84,5 +83,15 @@ public enum Pair {
 
     public boolean is役牌() {
         return this.pair1.is役牌() && this.pair1.is役牌();
+    }
+
+    @Override
+    public boolean isSet() {
+        return true;
+    }
+
+    @Override
+    public boolean isChow() {
+        return false;
     }
 }

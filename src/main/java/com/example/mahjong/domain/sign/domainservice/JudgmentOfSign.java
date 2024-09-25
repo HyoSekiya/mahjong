@@ -24,6 +24,8 @@ public class JudgmentOfSign {
 
     private final HeadOfSign headOfSign;
 
+    private final WaitOfSign waitOfSign;
+
     public SumSign sumSign (List<Tiles> tilesList, Win win) {
 
         // 基本符
@@ -45,8 +47,9 @@ public class JudgmentOfSign {
         Sign 雀頭 = headOfSign.judgement(tilesList);
 
         // 待の形
+        Sign 待ちの形 = waitOfSign.judgement(tilesList);
 
-        int sum = 基本符.getScore() + 和了方.getScore() + 面子得点合計 + 雀頭.getScore();
+        int sum = 基本符.getScore() + 和了方.getScore() + 面子得点合計 + 雀頭.getScore() + 待ちの形.getScore();
 
         return new SumSign(sum);
 

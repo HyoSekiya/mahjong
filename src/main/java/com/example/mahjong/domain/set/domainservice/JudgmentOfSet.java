@@ -1,9 +1,8 @@
 package com.example.mahjong.domain.set.domainservice;
 
-import com.example.mahjong.domain.set.Chow;
-import com.example.mahjong.domain.set.Pair;
-import com.example.mahjong.domain.set.Pung;
+import com.example.mahjong.domain.set.*;
 import com.example.mahjong.domain.tile.tiles.Tiles;
+import com.example.mahjong.domain.tile.tiles.suits.Characters;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
@@ -20,7 +19,7 @@ public class JudgmentOfSet {
 
     public boolean is33332(List<Tiles> tilesList) {
 
-        List<Tiles>  tiles = new ArrayList<Tiles>(tilesList);
+        List<Tiles> tiles = new ArrayList<Tiles>(tilesList);
 
         // 配牌の中にどの組み合わせの順子が含まれているか
         List<Chow> chowList = whichChowsAreIncluded(tilesList);
@@ -32,12 +31,12 @@ public class JudgmentOfSet {
         Optional<Pair> pair = whichPairAreIncluded(tilesList);
 
         // 刻子も順子もない場合、false
-        if (chowList.isEmpty() && pungList.isEmpty()){
+        if (chowList.isEmpty() && pungList.isEmpty()) {
             return false;
         }
 
         // 順子を消す
-        for (Chow chow: chowList) {
+        for (Chow chow : chowList) {
             System.out.println("Removing chow: " + chow);
             tiles.remove(chow.chow1);
             tiles.remove(chow.chow2);
@@ -46,7 +45,7 @@ public class JudgmentOfSet {
         }
 
         // 刻子を消す
-        for (Pung pung: pungList) {
+        for (Pung pung : pungList) {
             tiles.remove(pung.pung1);
             tiles.remove(pung.pung2);
             tiles.remove(pung.pung3);
@@ -81,3 +80,4 @@ public class JudgmentOfSet {
         return Pair.whichPairAreIncluded(tilesList);
     }
 }
+

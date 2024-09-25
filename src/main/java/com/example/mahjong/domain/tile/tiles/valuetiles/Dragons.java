@@ -81,6 +81,11 @@ public enum Dragons implements Tiles {
 
     @Override
     public boolean is19字牌() {
+        return true;
+    }
+
+    @Override
+    public boolean is1or9() {
         return false;
     }
 

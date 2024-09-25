@@ -64,6 +64,11 @@ public enum NotTiles implements Tiles {
     }
 
     @Override
+    public boolean is1or9() {
+        return false;
+    }
+
+    @Override
     public boolean isNot19字牌() {
         return false;
     }

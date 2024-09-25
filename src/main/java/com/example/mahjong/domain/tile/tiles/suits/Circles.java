@@ -82,9 +82,18 @@ public enum Circles implements Tiles {
     @Override
     public boolean is19字牌() {
         return switch (this){
-            case ONE_CIRCLES -> false;
-            case NINE_CIRCLES -> false;
-            default -> true;
+            case ONE_CIRCLES -> true;
+            case NINE_CIRCLES -> true;
+            default -> false;
+        };
+    }
+
+    @Override
+    public boolean is1or9() {
+        return switch (this){
+            case ONE_CIRCLES -> true;
+            case NINE_CIRCLES -> true;
+            default -> false;
         };
     }
 

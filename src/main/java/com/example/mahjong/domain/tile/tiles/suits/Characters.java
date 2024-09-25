@@ -23,17 +23,6 @@ public enum Characters implements Tiles {
     public final String level;
     public final String apiCode;
 
-//    @Override
-//    public Tiles whichTiles(String value) {
-//        for(Characters characters: Characters.values()){
-//            if (characters.apiCode.equals(value)) {
-//                return characters;
-//            }
-//        }
-//
-//        return NotTiles.NOT_EXISTS;
-//    }
-
     @Override
     public boolean is役牌() {
         return false;
@@ -81,6 +70,15 @@ public enum Characters implements Tiles {
 
     @Override
     public boolean is19字牌() {
+        return switch (this) {
+            case ONE_CHARACTERS -> true;
+            case NINE_CHARACTERS -> true;
+            default -> false;
+        };
+    }
+
+    @Override
+    public boolean is1or9() {
         return switch (this) {
             case ONE_CHARACTERS -> true;
             case NINE_CHARACTERS -> true;
