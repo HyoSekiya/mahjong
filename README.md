@@ -10,6 +10,9 @@ https://github.com/users/HyoSekiya/projects/2/views/3
 役：https://chouseisan.com/l/post-9420/
 
 ## コード値
+
+<details><summary>手牌(1~14)</summary>
+
 ## 三元牌
 ```
 white_dragon
@@ -60,3 +63,19 @@ seven_circle
 eight_circle
 nine_circle
 ```
+
+
+</details>
+
+<details><summary>和了方(15)</summary>
+
+```
+メンゼンロン : menzen_ron
+ロン : ron
+メンゼンツモ : menzen_tsumo
+ツモ : tsumo
+
+```
+
+</details>
+
