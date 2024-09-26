@@ -70,9 +70,9 @@ nine_circle
 
 ```
 メンゼンロン : menzen_ron
-ロン : ron
+鳴き有りロン : not_menzen_ron
 メンゼンツモ : menzen_tsumo
-ツモ : tsumo
+鳴き有りツモ : not_menzen_tsumo
 
 ```
 
