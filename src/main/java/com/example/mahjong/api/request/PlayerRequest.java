@@ -84,9 +84,7 @@ public class PlayerRequest {
 
 
     public Tiles 牌に変換(String value) {
-
         return Tiles.whichTiles(value);
-
     }
 
     public Win 和了方を定義 () {

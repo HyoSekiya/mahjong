@@ -99,12 +99,8 @@ public class Calculation {
             case 4:
                 if (合計符 == 30) {
                     return ChildScore.四飜_30符;
-                } else if (合計符 == 40) {
-                    return ChildScore.四飜_40符;
-                } else if (合計符 == 50) {
-                    return ChildScore.四飜_50符;
-                } else if (合計符 >= 60) {
-                    return ChildScore.四飜_60符;
+                } else if (合計符 >= 40) {
+                    return ChildScore.満貫;
                 }
             case 5:
                 return ChildScore.満貫;
@@ -181,12 +177,8 @@ public class Calculation {
                     return ParentScore.四飜_20符;
                 } else if (合計符 == 30) {
                     return ParentScore.四飜_30符;
-                } else if (合計符 == 40) {
-                    return ParentScore.四飜_40符;
-                } else if (合計符 == 50) {
-                    return ParentScore.四飜_50符;
-                } else if (合計符 >= 60) {
-                    return ParentScore.四飜_60符;
+                } else if (合計符 >= 40) {
+                    return ParentScore.満貫;
                 }
                 break;
             case 5:

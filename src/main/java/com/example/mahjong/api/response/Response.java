@@ -46,6 +46,7 @@ public class Response {
 
         responseMap.put("和了牌", tileStrings);
         responseMap.put("和了役", roleStrings);
+        responseMap.put("和了内容", winScore);
         responseMap.put("和了点数", winScoreString);
 //        responseMap.put("和了符", sumSignValue);
 
@@ -57,7 +58,7 @@ public class Response {
         if (score.is子()) {
             ChildScore childScore = (ChildScore) score;
             if (win.isツモ()) {
-                return String.format("子から:%d点 親から:%d点", childScore.getツモ子点数(), childScore.getツモ親点数());
+                return String.format("子から:%d点 親から:%d点",childScore.getツモ子点数(), childScore.getツモ親点数());
             }
             if (win.isロン()) {
                 return String.format("ロンした相手から: %d + 点", childScore.getロン点数());
