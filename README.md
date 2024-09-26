@@ -64,7 +64,6 @@ eight_circle
 nine_circle
 ```
 
-
 </details>
 
 <details><summary>和了方(15)</summary>
@@ -74,6 +73,16 @@ nine_circle
 ロン : ron
 メンゼンツモ : menzen_tsumo
 ツモ : tsumo
+
+```
+
+</details>
+
+<details><summary>親子の選択(16)</summary>
+
+```
+親 : parent
+子 : child
 
 ```
 
