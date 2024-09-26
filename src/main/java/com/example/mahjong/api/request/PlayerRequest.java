@@ -1,6 +1,8 @@
 package com.example.mahjong.api.request;
 
 
+import com.example.mahjong.domain.common.ParentOrChild;
+import com.example.mahjong.domain.common.ReachFlag;
 import com.example.mahjong.domain.sign.signs.Win;
 import com.example.mahjong.domain.tile.tiles.NotTiles;
 import com.example.mahjong.domain.tile.tiles.Tiles;
@@ -31,6 +33,10 @@ public class PlayerRequest {
     private String fourteen;
     // 和了方
     private String howToWin;
+    // 親or子
+    private String parentOrChild;
+    // リーチの有無
+    private String reachFlag;
 
     public List<Tiles> 利用者の牌を牌に変換() {
 
@@ -85,5 +91,13 @@ public class PlayerRequest {
 
     public Win 和了方を定義 () {
         return Win.whichWin(howToWin);
+    }
+
+    public ParentOrChild 親子を定義() {
+        return ParentOrChild.which(parentOrChild);
+    }
+
+    public ReachFlag リーチの有無() {
+        return ReachFlag.which(reachFlag);
     }
 }

@@ -35,6 +35,11 @@ public enum Dragons implements Tiles {
 //    }
 
     @Override
+    public String getLabel() {
+        return this.label;
+    }
+
+    @Override
     public boolean is役牌() {
         return true;
     }

@@ -20,6 +20,11 @@ public enum Winds implements Tiles {
 
     public final String apiCode;
 
+    @Override
+    public String getLabel() {
+        return this.label;
+    }
+
     // TODO: trueを返しているが、自風と場風を元に、役牌を判断できるようにする
     @Override
     public boolean is役牌() {

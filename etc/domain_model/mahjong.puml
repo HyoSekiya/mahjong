@@ -28,29 +28,37 @@ package api {
         11つ目 : String
         12つ目 : String
         13つ目 : String
-        14つ目 : String
+        14つ目(待牌) : String
+        和了方 : String
+        親or子 : String
         リクエストを作成(List<String>) : List<String>
     }
 }
 package service{
     class Service{
         並べるくん
-        役の判定くん
+        合計符計算くん
+        和了役判定くん
+        和了点数計算くん
         + 和了点数を返す(List<牌>) : 和了内容
     }
 }
 
 Api ..> Service
 package domain {
-    package 和了点数 {
+    package 和了点数計算 {
         class 和了点数計算くん{
             和了内容
             和了点数を計算(List<牌>) : 和了内容
         }
-        enum 点数表{}
-        class 和了点数 {
-            和了点数 : int
+        package 和了点数一覧{
+            interface 和了点数{}
+            enum 子の和了点数{}
+            enum 親の和了点数{}
+            子の和了点数 --|> 和了点数
+            親の和了点数 --|> 和了点数
         }
+
         class 和了内容{
             List<牌>
             List<和了役>
@@ -58,8 +66,7 @@ package domain {
             和了点数
             和了内容を生成() : 和了内容
         }
-        和了点数計算くん ..> 点数表
-        和了点数計算くん ..> 和了点数
+        和了点数計算くん .> 和了点数
         和了点数計算くん ..> 和了内容
     }
 
@@ -206,10 +213,6 @@ package domain {
     }
 
     package 役 {
-        class 和了役 {
-            役の名前 : String
-            役の飜数 : String
-        }
         class 和了役判定くん {
             順子
             刻子
@@ -219,9 +222,8 @@ package domain {
             3飜の判定
             5飜の判定
             6飜の判定
-            和了役を返す(List<牌>) : List<和了役>
+            和了役を返す(List<牌>) : List<役一覧>
         }
-        和了役判定くん .> 和了役
         和了役判定くん ..> 役の判定
 
         package 役の判定 {
@@ -379,17 +381,32 @@ package domain {
         面子判定くん..>刻子
         面子判定くん..>対子
     }
+
+    package プレイヤー状況 {
+        enum 親子{
+            親
+            子
+        }
+        enum リーチの有無{
+            リーチ有り
+            リーチ無し
+        }
+    }
     和了点数計算くん .> 合計符計算くん
     和了点数計算くん .> 和了役判定くん
     和了点数計算くん .> 牌interface
+    和了点数計算くん .> プレイヤー状況
     面子 ..> 牌
     符 ...> 面子
     符 ...> 牌
     役 ..> 牌
     役 ..> 面子
 }
-Api ..> 利用者のリクエストを牌に変換するくん
+Api ..> domain
 Service ..> 和了点数計算くん
 Service ..> 並べるくん
+Service ..> 合計符計算くん
+Service ..> 和了役判定くん
+Service ..> 和了点数計算くん
 
 @enduml

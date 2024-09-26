@@ -9,10 +9,11 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public enum Win implements Sign{
 
-    メンゼンロン("メンゼンロン", 10, "ron"),
-    ツモ("ツモ", 2, "tsumo"),
+    メンゼンロン("メンゼンロン", 10, "menzen_ron"),
+    鳴き有りロン("ロン", 0, "not_menzen_ron"),
+    メンゼンツモ("メンゼンツモ", 0, "menzen_tsumo"),
+    鳴き有りツモ("ツモ", 2, "not_menzen_tsumo"),
     その他("その他", 0, "others");
-
 
     public final String label;
 
@@ -30,12 +31,28 @@ public enum Win implements Sign{
         return this.score;
     }
 
-    public boolean isRon() {
+    public boolean isメンゼンロン() {
         return this.equals(メンゼンロン);
     }
 
-    public boolean isTsumo() {
-        return this.equals(ツモ);
+    public boolean is鳴き有りロン() {
+        return this.equals(鳴き有りロン);
+    }
+
+    public boolean isメンゼンツモ() {
+        return this.equals(メンゼンツモ);
+    }
+
+    public boolean is鳴き有りツモ() {
+        return this.equals(鳴き有りツモ);
+    }
+
+    public boolean isツモ() {
+        return isメンゼンツモ() || is鳴き有りツモ();
+    }
+
+    public boolean isロン() {
+        return is鳴き有りロン() || isメンゼンロン();
     }
 
     public static Win whichWin (String value) {

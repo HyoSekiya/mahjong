@@ -14,16 +14,23 @@ public class SignOfWin {
 
     public Sign judgement (Win win) {
 
-        if (win.isRon()) {
+        if (win.isメンゼンロン()) {
             return Win.メンゼンロン;
         }
 
-        if (win.isTsumo()) {
-            return Win.ツモ;
+        if (win.is鳴き有りロン()) {
+            return Win.鳴き有りロン;
         }
 
-        return Win.その他;
+        if (win.isメンゼンツモ()) {
+            return Win.メンゼンツモ;
+        }
 
+        if (win.is鳴き有りツモ()) {
+            return Win.鳴き有りツモ;
+        }
+
+        throw new RuntimeException("和了方を設定しろ！！！！！");
     }
 
 }

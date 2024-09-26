@@ -17,6 +17,8 @@ import java.util.List;
 @Component
 public interface Tiles {
 
+    public String getLabel();
+
     boolean is役牌();
 
     boolean is風牌();

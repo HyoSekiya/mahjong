@@ -1,5 +1,7 @@
 package com.example.mahjong.domain.role.unit;
 
+import com.example.mahjong.domain.common.ReachFlag;
+import com.example.mahjong.domain.sign.signs.Win;
 import com.example.mahjong.domain.tile.tiles.Tiles;
 import org.springframework.stereotype.Component;
 
@@ -27,5 +29,13 @@ public class OneRole {
         return list.stream().
                 filter(Tiles::isNot19字牌)
                 .count() == 和了牌の数;
+    }
+
+    public boolean isリーチ(ReachFlag reachFlag) {
+        return reachFlag.isリーチ();
+    }
+
+    public boolean isメンゼンツモ(Win win) {
+        return win.isメンゼンツモ();
     }
 }

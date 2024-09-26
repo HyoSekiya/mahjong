@@ -24,6 +24,11 @@ public enum Characters implements Tiles {
     public final String apiCode;
 
     @Override
+    public String getLabel() {
+        return this.level;
+    }
+
+    @Override
     public boolean is役牌() {
         return false;
     }

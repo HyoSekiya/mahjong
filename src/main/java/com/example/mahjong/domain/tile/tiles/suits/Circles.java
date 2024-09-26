@@ -35,6 +35,11 @@ public enum Circles implements Tiles {
 //    }
 
     @Override
+    public String getLabel() {
+        return this.level;
+    }
+
+    @Override
     public boolean is役牌() {
         return false;
     }

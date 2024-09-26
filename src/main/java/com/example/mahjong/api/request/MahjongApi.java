@@ -2,8 +2,8 @@ package com.example.mahjong.api.request;
 
 import com.example.mahjong.api.response.Response;
 import com.example.mahjong.domain.calculation.WinEntity;
-import com.example.mahjong.domain.sign.SumSign;
-import com.example.mahjong.domain.role.WinningRole;
+import com.example.mahjong.domain.calculation.score.Score;
+import com.example.mahjong.domain.role.Role;
 import com.example.mahjong.service.Service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -18,33 +18,28 @@ import java.util.Map;
 @RequestScope
 public class MahjongApi {
 
-
     /**
      * ApplicationService
      */
     private final Service service;
 
-    @PostMapping("/sum")
-    public List<Map<String, String>> mahjong(@RequestBody PlayerRequest request){
-
-        // 利用者の和了と飜数を返却
-        List<WinningRole> response = service.和了役と飜数を返す(
-                request.利用者の牌を牌に変換()
-        );
-
-        return Response.toResponse(response);
-    }
-
     @PostMapping("/sum2")
-    public int mahjong2(@RequestBody PlayerRequest request){
+    public Map<String, Object> mahjong(@RequestBody PlayerRequest request){
 
         // 利用者の和了と飜数を返却
         WinEntity winEntity = service.点数計算(
                 request.利用者の牌を牌に変換(),
-                request.和了方を定義()
+                request.和了方を定義(),
+                request.親子を定義(),
+                request.リーチの有無()
         );
 
-        // TODO: ResoponseクラスでWinEnityから整形して、出力
-        return winEntity.getWinScore().getValue();
+        return Response.toResponse(
+                winEntity.getTilesList(),
+                winEntity.getRoles(),
+                winEntity.getWinScore(),
+                winEntity.getSumSign(),
+                winEntity.getWin()
+        );
     }
 }
