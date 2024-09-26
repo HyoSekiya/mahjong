@@ -5,11 +5,11 @@ package api {
         Request
         Response
         利用者のリクエストを牌に変換するくん
-        invoke(List<牌>) : Response
+        invoke(List<牌>) : Map<String, Object>
     }
     class Response {
-        response : Map<String,String>
-        和了役をリストで返す : List<Map<String,String>>
+        response : Map<String,Object>
+        和了内容を返す : Map<String,Object>
     }
     Api .> Request
     Api .> Response
@@ -40,7 +40,7 @@ package service{
         合計符計算くん
         和了役判定くん
         和了点数計算くん
-        + 和了点数を返す(List<牌>) : 和了内容
+        + 和了点数を返す(List<牌>) : 和了内容Entity
     }
 }
 
@@ -48,8 +48,8 @@ Api ..> Service
 package domain {
     package 和了点数計算 {
         class 和了点数計算くん{
-            和了内容
-            和了点数を計算(List<牌>) : 和了内容
+            和了内容Entity
+            和了点数を計算(List<牌>) : 和了内容Entity
         }
         package 和了点数一覧{
             interface 和了点数{}
@@ -59,15 +59,14 @@ package domain {
             親の和了点数 --|> 和了点数
         }
 
-        class 和了内容{
+        class 和了内容Entity{
             List<牌>
             List<和了役>
             合計符
             和了点数
-            和了内容を生成() : 和了内容
         }
         和了点数計算くん .> 和了点数
-        和了点数計算くん ..> 和了内容
+        和了点数計算くん ..> 和了内容Entity
     }
 
     package 符 {
